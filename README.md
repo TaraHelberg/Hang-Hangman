@@ -1,31 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# HANG-HANGMAN
+![amiresponsive]()
 
-Welcome USER_NAME,
+INTRODUCTION & AM I RESPONSIVE GO HERE 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How to play
 
-## Creating the Heroku app
+ABOUT THE GAME GO HERE
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+# Flowchart
 
-1. `heroku/python`
-2. `heroku/nodejs`
+# Features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+# Introduction and Welcome
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+# Game in Play
 
-Connect your GitHub repository and deploy as normal.
+# Game Won
 
-## Constraints
+# Technologies  / Support Used
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+* Below is a list of Technologies / Support I have used to build my site.
 
------
-Happy coding!
+    + Code Institute lessons and the Love Sandwiches in assisting with how to start and construct my project.
+    + Code Institute Supplied the template inorder to display Python in a Visual formed Terminal
+    + GitHub for my repository 
+    + Git used to code within and provided backups of all my code.
+    + Hourokapp for project deployment
+     
+# Testing
+* Testing During development of the project was done through out the project to see how the project looked and felt within the Git Terminal using python3. run.py
+
+  * Manual Testing
+
+| Feature           |  Expect              |  Action |  Result                 |
+|-------------------|----------------------|---------|-------------------------|
+|                   |                      |         |                         |
+|                   |                      |         |                         |
+|                   |                      |         |                         | 
+
+* User Testing
+
+    + Expectations
+      As a user I wanted the site to 
+      1. Understand the purpose of the site, 
+      2. Be able to navigate easily through the site,
+      3. 
+      4. 
+    + Result
+      As a user I was able to  
+      1. 
+      2. 
+      3. 
+      4. 
+
+# Bugs 
+
+
+
+# Validator testing
+  * PEP8 
+    * No errors were returned from 
+
+# Deployment of Project
+  
+# Credits
+  
