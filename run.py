@@ -1,7 +1,11 @@
 import random
 import colorama
 from colorama import Fore, Back, Style
-colorama.init()
+colorama.init(autoreset=True)
+""""
+Python colorama , color text information and how to use gotten from the below video
+https://www.youtube.com/watch?v=u51Zjlnui4Y
+"""
 
 
 def game_intro():
