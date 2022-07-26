@@ -3,14 +3,17 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 """"
-Python colorama , color text information and how to use gotten from the below video
+Python colorama , color text information
+and how to use gotten from the below video
 https://www.youtube.com/watch?v=u51Zjlnui4Y
 """
 
 
 def game_intro():
     """
-    Game Name "Logo" , Welcome's user and request users name and prints Hello users name 
+    Game Name "Logo",Welcome's user,
+    request users name
+    and prints Hello users name 
     """
     print(
         """
@@ -29,7 +32,16 @@ def game_intro():
         """
     )
     print("Welcome")
-    name = input('What is your name?\n')
+    name = input('What is your name?\n')    
     print(f'Hello, {name}')
     
-game_intro()
+
+
+
+def main():
+    """
+    Run all program functions
+    """
+    game_intro()
+
+main()
