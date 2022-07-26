@@ -16,7 +16,8 @@ def game_intro():
     and prints Hello users name 
     """
     print(
-        """
+        f"""{Fore.BLUE+Style.BRIGHT}
+        
          _   _
         | | | | __ _ _ __   __ _ 
         | |_| |/ _` | '_ \\ / _` | 
@@ -36,10 +37,10 @@ def game_intro():
     name = None
 
     while True:
-        name = input('What is your name?\n')
+        name = input(f"{Fore.GREEN+Style.BRIGHT}What is your name?\n")
 
         if not name.isalpha():
-            print('Username must be alphabets only')
+            print(f"{Fore.RED+Style.BRIGHT}Username must be alphabets only")
             continue
         else:
             print(f'Hello, {name}')
