@@ -31,10 +31,19 @@ def game_intro():
                             |___/
         """
     )
-    print("Welcome")
-    name = input('What is your name?\n')    
-    print(f'Hello, {name}')
-    
+    print("Welcome to Hang-Hangman")
+    print("We hope you have fun!")    
+    name = None
+
+    while True:
+        name = input('What is your name?\n')
+
+        if not name.isalpha():
+            print('Username must be alphabets only')
+            continue
+        else:
+            print(f'Hello, {name}')
+            break
 
 
 
