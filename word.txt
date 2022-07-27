@@ -1,304 +1,502 @@
 # List of Words for Random Word Choice to play game
 # Aquired from https://www.randomlists.com/random-words
-Words = [
-    'government',
-    'pet',
-    'stove',
-    'useless',
-    'bite',
-    'gainful',
-    'deserted',
-    'dull',
-    'instinctive',
-    'team',
-    'cloistered',
-    'sneaky',
-    'caring',
-    'committee',
-    'tail',
-    'hard',
-    'annoy',
-    'periodic',
-    'sneeze',
-    'obeisant',
-    'reflect',
-    'harm',
-    'sparkle',
-    'trucks',
-    'bow',
-    'helpful',
-    'pathetic',
-    'obese',
-    'panicky',
-    'size',
-    'transport',
-    'cuddly',
-    'dramatic',
-    'sloppy',
-    'coil',
-    'pour',
-    'colour',
-    'previous',
-    'known',
-    'punishment',
-    'hanging',
-    'lip',
-    'heady',
-    'grandmother',
-    'clover',
-    'tow',
-    'eggnog',
-    'zonked',
-    'ship',
-    'position',
-    'help',
-    'competition',
-    'cool',
-    'glossy',
-    'kaput',
-    'huge',
-    'unequal',
-    'flippant',
-    'spotted',
-    'count',
-    'truculent',
-    'zesty',
-    'wiry',
-    'popcorn',
-    'internal',
-    'disturbed',
-    'yielding',
-    'ban',
-    'tremble',
-    'narrow',
-    'knock',
-    'race',
-    'shape',
-    'fold',
-    'important',
-    'grass',
-    'live',
-    'voyage',
-    'current',
-    'land',
-    'stroke',
-    'descriptive',
-    'pastoral',
-    'round',
-    'cat',
-    'arrogant',
-    'night',
-    'left',
-    'verdant',
-    'cherries',
-    'effect',
-    'tax',
-    'rock',
-    'travel',
-    'bent',
-    'jar',
-    'silky',
-    'agonizing',
-    'greet',
-    'quizzical',
-    'toothpaste',
-    'average',
-    'draconian',
-    'toe',
-    'outgoing',
-    'repulsive',
-    'button',
-    'humdrum',
-    'calculating',
-    'fence',
-    'boast',
-    'chilly',
-    'zealous',
-    'listen',
-    'pushy',
-    'murky',
-    'tidy',
-    'care',
-    'knotty',
-    'friction',
-    'miniature',
-    'boorish',
-    'brother',
-    'claim',
-    'earth',
-    'grab',
-    'trace',
-    'sheet',
-    'wash',
-    'cold',
-    'earthy',
-    'rate',
-    'possible',
-    'soup',
-    'suggest',
-    'white'
-    'friend',
-    'plantation',
-    'chew',
-    'careless',
-    'late',
-    'year',
-    'bore',
-    'obtain',
-    'gate',
-    'third',
-    'legs',
-    'icy',
-    'spell',
-    'quill',
-    'women',
-    'hole',
-    'spade',
-    'likeable',
-    'cloth',
-    'private',
-    'admit',
-    'ceaseless',
-    'step',
-    'corn',
-    'ticket',
-    'porter',
-    'hum',
-    'dynamic',
-    'double',
-    'hulking',
-    'cactus',
-    'safe',
-    'sink',
-    'linen',
-    'didactic',
-    'shaggy',
-    'scrape',
-    'macabre',
-    'electric',
-    'activity',
-    'mitten',
-    'debt',
-    'whip',
-    'snobbish',
-    'wreck',
-    'royal',
-    'confuse',
-    'selection',
-    'thirsty',
-    'arrive',
-    'power',
-    'abounding',
-    'spray',
-    'childlike',
-    'easy',
-    'relation',
-    'rat',
-    'delirious',
-    'rough',
-    'brass',
-    'absorbed',
-    'cheese',
-    'pie',
-    'limping',
-    'smoke',
-    'educate',
-    'intelligent',
-    'advice',
-    'pleasure',
-    'big',
-    'heartbreaking',
-    'good',
-    'seal',
-    'offend',
-    'fear',
-    'substance',
-    'advise',
-    'uninterested',
-    'numerous',
-    'torpid',
-    'fearless',
-    'spotty',
-    'friendly',
-    'wander',
-    'coach',
-    'gamy',
-    'quixotic',
-    'pale',
-    'mint',
-    'dusty',
-    'division',
-    'cross',
-    'foregoing',
-    'preach',
-    'apparel',
-    'last',
-    'stiff',
-    'shocking',
-    'swanky',
-    'lonely',
-    'unarmed',
-    'parallel',
-    'dinner',
-    'lacking',
-    'match',
-    'umbrella',
-    'dislike',
-    'religion',
-    'bad',
-    'bushes',
-    'bait',
-    'brainy',
-    'discreet',
-    'wind',
-    'hellish',
-    'unfasten',
-    'spiky',
-    'collar',
-    'cause',
-    'grade',
-    'fax',
-    'writer',
-    'tickle',
-    'trousers',
-    'tray',
-    'rhythm',
-    'cakes',
-    'glistening',
-    'dirt',
-    'squash',
-    'soap',
-    'earthquake',
-    'worm',
-    'suffer',
-    'common',
-    'thick',
-    'whole',
-    'creator',
-    'frantic',
-    'hand',
-    'driving',
-    'splendid',
-    'laugh',
-    'ground',
-    'changeable',
-    'blot',
-    'young',
-    'tranquil',
-    'elated',
-    'carry',
-    'steam',
-    'distinct',
-    'vacuous',
-    'rude',
-    'succinct',
-    'oil',
-    'fail',
-    'spring',
-    'bit',
-    'cart',
-    'bless',
-    'disapprove',
-    'slave',
-    'planes',
-]
+letters
+fetch
+bat
+fruit
+snobbish
+story
+rejoice
+twist
+obscene
+rush
+encourage
+exchange
+voiceless
+tame
+water
+fold
+dress
+wound
+double
+sulky
+iron
+noiseless
+juice
+elbow
+fallacious
+gather
+lewd
+obey
+tall
+silent
+silk
+happy
+dead
+violet
+adjustment
+books
+ruin
+different
+true
+count
+tearful
+heavenly
+toothbrush
+forgetful
+prevent
+bath
+flower
+scary
+salty
+onerous
+angle
+fear
+eight
+flavor
+hot
+recondite
+decisive
+massive
+sour
+dry
+questionable
+leather
+glow
+riddle
+jobless
+tense
+impolite
+comparison
+damaged
+ball
+popcorn
+happen
+worried
+berserk
+crown
+word
+extra-large
+circle
+employ
+pumped
+distinct
+illegal
+advise
+expect
+maid
+year
+exultant
+materialistic
+basketball
+replace
+powder
+quick
+lyrical
+squalid
+devilish
+sudden
+creator
+economic
+connect
+exciting
+rest
+desire
+rose
+upbeat
+important
+roof
+machine
+tawdry
+curve
+damaging
+acceptable
+slim
+worthless
+pretend
+van
+clear
+birthday
+dog
+shave
+beam
+fine
+remind
+prick
+bounce
+show
+nebulous
+loaf
+enchanted
+maddening
+vague
+wanting
+can
+pen
+closed
+telephone
+large
+responsible
+sneaky
+dapper
+obtainable
+last
+rat
+underwear
+marked
+thundering
+wish
+meddle
+fool
+complete
+fancy
+earth
+elastic
+cheap
+vessel
+uptight
+succinct
+painstaking
+adjoining
+stream
+low
+labored
+future
+third
+light
+swing
+chickens
+flimsy
+train
+shape
+rambunctious
+cat
+warn
+seat
+snakes
+marble
+married
+reproduce
+ordinary
+hour
+like
+remember
+wicked
+young
+unfasten
+spicy
+loving
+premium
+jolly
+synonymous
+boot
+payment
+hook
+flagrant
+embarrassed
+wealthy
+spoon
+suggest
+sound
+whip
+argument
+uneven
+wire
+icicle
+share
+careless
+enormous
+belong
+quack
+zany
+walk
+babies
+tease
+reach
+dazzling
+hypnotic
+theory
+steer
+cold
+comb
+sassy
+afterthought
+gorgeous
+spray
+own
+slave
+reaction
+skirt
+protect
+living
+inexpensive
+lumpy
+toes
+airplane
+scared
+program
+pop
+disarm
+ink
+thrill
+vulgar
+curtain
+ray
+son
+giraffe
+apparatus
+quickest
+nifty
+oil
+rate
+bawdy
+pick
+bored
+abusive
+food
+live
+carpenter
+burn
+frail
+hushed
+stretch
+science
+pour
+ice
+writer
+men
+berry
+medical
+root
+search
+glass
+tin
+succeed
+face
+branch
+tiger
+alive
+offer
+tomatoes
+brick
+grandiose
+library
+wrathful
+sweater
+mend
+end
+seashore
+smelly
+pause
+paltry
+spiders
+distribution
+instrument
+eager
+defective
+perfect
+representative
+noxious
+green
+servant
+book
+gaze
+imaginary
+please
+squeeze
+songs
+pack
+abiding
+smoggy
+fat
+steady
+stroke
+need
+frog
+ambiguous
+confuse
+five
+back
+sleet
+star
+capricious
+chance
+precede
+bag
+number
+plants
+free
+rod
+mysterious
+natural
+wind
+cooing
+yielding
+war
+mixed
+feeling
+faulty
+awful
+produce
+strong
+wasteful
+pest
+next
+grumpy
+toy
+yak
+slip
+colour
+various
+land
+nut
+man
+mate
+panoramic
+painful
+freezing
+caption
+domineering
+ring
+filthy
+deafening
+silky
+spell
+flap
+dear
+chicken
+pat
+mice
+belief
+instruct
+giants
+practice
+grape
+vengeful
+knife
+lying
+brainy
+rhetorical
+plan
+keen
+stupendous
+plain
+recess
+nasty
+old
+bushes
+four
+front
+windy
+spotty
+cheese
+melodic
+marvelous
+ruddy
+good
+label
+complex
+spare
+kindhearted
+furniture
+tough
+polite
+vase
+quilt
+horrible
+beg
+sleep
+mess up
+spy
+sedate
+melted
+exclusive
+overconfident
+shade
+act
+unable
+paint
+silver
+person
+flash
+holistic
+pet
+dream
+satisfy
+decay
+direction
+head
+smash
+exist
+delight
+steadfast
+omniscient
+nauseating
+development
+strap
+hallowed
+empty
+zonked
+hobbies
+eyes
+concentrate
+hover
+partner
+station
+giddy
+noisy
+condemned
+flame
+thaw
+stay
+adventurous
+alert
+finger
+wide-eyed
+invent
+wriggle
+draconian
+approve
+nutritious
+degree
+friend
+gainful
+laborer
+behavior
+class
+minute
+rice
+fumbling
+zebra
+brash
+wave
+icky
+seed
+friendly
+eggs
+quixotic
+smooth
+stomach
+meal
+use
+rescue
+aboard
+squeak
+wacky
+mother
+pencil
+wealth
+lethal
+furry
+receive
+rabbit
+bitter
+file
+elfin
+clean
+excellent
+incompetent
+outrageous
+right
+murder
+zephyr

@@ -40,11 +40,21 @@ def game_intro():
         name = input(f"{Fore.GREEN+Style.BRIGHT}What is your name?\n")
 
         if not name.isalpha():
-            print(f"{Fore.RED+Style.BRIGHT}Username must be alphabets only")
+            print(f"{Fore.RED+Style.BRIGHT}Your name must be alphabetic only")
             continue
         else:
             print(f'Hello, {name}')
             break
+
+
+def get_random_word():
+    """
+    Picks a random word from words.txt for hangman word to be guessed by user.
+    Code ideas and how to from https://www.youtube.com/watch?v=pFvSb7cb_Us 
+    and adappted for my Hang-Hangman
+    """
+    random_word = random.choice(open("words.txt", "r").read().split('\n'))
+    return random_word.upper()
 
 
 
@@ -53,5 +63,6 @@ def main():
     Run all program functions
     """
     game_intro()
+    
 
 main()
