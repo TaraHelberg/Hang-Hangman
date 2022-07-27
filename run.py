@@ -47,17 +47,33 @@ def game_intro():
             break
 
 
+def hangman_rules():
+    """
+    Explains to the User how to play the game.      
+    """
+    print(f"{Fore.BLUE+Style.BRIGHT}Welcome to Hang-Hangman How to play Rules:D.")
+    print(f"{Fore.BLUE+Style.BRIGHT}This si a guess the word game")
+    print(f"{Fore.BLUE+Style.BRIGHT}Guess 1 letter at a time or guess the entire word !")
+    print(f"{Fore.BLUE+Style.BRIGHT}If you guess the wrong letter you loose a life :( Sorry")
+    print(f"{Fore.BLUE+Style.BRIGHT}Your Hang-Hangman will then start to form")
+    print(f"{Fore.BLUE+Style.BRIGHT}When you reach 0 lives your will be HANGED !")
+    print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game to play again and WIN :D ")
+
+
+
 def get_random_word():
     """
     Picks a random word from words.txt for hangman word to be guessed by user.
     How to found on https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
+    adpated for use in Hang-Hangman
     """
     random_word = random.choice(open("words.txt", "r").read().split('\n'))
     return random_word.upper()
 
+
 def hangman_lives(lives):
     """
-    Displays Hang-Hangman visuals to show man been hung on wrong word choice
+    Displays Hang-Hangman visuals to show man been hung on wrong word letter choice
     """
     lives_left = [
         """
@@ -164,12 +180,11 @@ def hangman_lives(lives):
     return lives_left[lives]
 
 
-
 def main():
     """
     Run all program functions
     """
     game_intro()
-    
+    hangman_rules() 
 
 main()
