@@ -52,10 +52,10 @@ def hangman_rules():
     Explains to the User how to play the game.      
     """
     print(f"{Fore.BLUE+Style.BRIGHT}Welcome to Hang-Hangman How to play Rules:D.")
-    print(f"{Fore.BLUE+Style.BRIGHT}This si a guess the word game")
+    print(f"{Fore.BLUE+Style.BRIGHT}This is a guess the word game.")
     print(f"{Fore.BLUE+Style.BRIGHT}Guess 1 letter at a time or guess the entire word !")
-    print(f"{Fore.BLUE+Style.BRIGHT}If you guess the wrong letter you loose a life :( Sorry")
-    print(f"{Fore.BLUE+Style.BRIGHT}Your Hang-Hangman will then start to form")
+    print(f"{Fore.BLUE+Style.BRIGHT}If you guess the wrong letter you loose a life :( Sorry.")
+    print(f"{Fore.BLUE+Style.BRIGHT}Your Hang-Hangman will then start to build.")
     print(f"{Fore.BLUE+Style.BRIGHT}When you reach 0 lives your will be HANGED !")
     print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game to play again and WIN :D ")
 
