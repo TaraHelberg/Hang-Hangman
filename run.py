@@ -60,6 +60,33 @@ def hangman_rules():
     print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game to play again and WIN :D ")
 
 
+def select_game_level():
+    """
+    Lets the User select the level of Hang-Hangman. 
+    The user can select to play E for Easy, M for Medium or H for Hard. 
+    """
+    print("Select the level you wish to play at.")
+    print("Press E for Easy")
+    print("Press M for Medium")
+    print("Press H for Hard")
+    difficulty = False
+    while not difficulty:
+        options = input("\n ").upper()
+        if options == "E":
+            difficulty = True
+            num_lives = 10
+            return num_lives
+        elif options == "M":
+            difficulty = True
+            num_lives = 7
+            return num_lives
+        elif options == "H":
+            difficulty = True
+            num_lives = 5
+            return num_lives
+        else:
+            print(f"{Fore.RED+Style.BRIGHT}Please select a level E , M or H to make your Choice")
+    
 
 def get_random_word():
     """
@@ -185,6 +212,7 @@ def main():
     Run all program functions
     """
     game_intro()
-    hangman_rules() 
+    hangman_rules()
+    select_game_level() 
 
 main()
