@@ -50,11 +50,118 @@ def game_intro():
 def get_random_word():
     """
     Picks a random word from words.txt for hangman word to be guessed by user.
-    Code ideas and how to from https://www.youtube.com/watch?v=pFvSb7cb_Us 
-    and adappted for my Hang-Hangman
+    How to found on https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
     """
     random_word = random.choice(open("words.txt", "r").read().split('\n'))
     return random_word.upper()
+
+def hangman_lives(lives):
+    """
+    Displays Hang-Hangman visuals to show man been hung on wrong word choice
+    """
+    lives_left = [
+        """
+        ___________
+        |/        |
+        |         O
+        |        /|\\
+        |         |
+        |        / \\
+        |\\
+        ========
+        """,
+        """
+        ___________
+        |/        |
+        |         O
+        |        /|\\
+        |         |
+        |        /
+        |\\
+        ========
+        """,
+        """
+        __________
+        |/        |
+        |         O
+        |        /|\\
+        |         |
+        |
+        |\\
+        ========
+        """,
+        """
+        __________
+        |/        |
+        |         O
+        |        /|
+        |         |
+        |
+        |\\
+        ========
+        """,
+        """
+        __________
+        |/        |
+        |         O
+        |         |
+        |         |
+        |
+        |\\
+        ========
+        """,
+        """
+        __________
+        |/        |
+        |         O
+        |
+        |
+        |
+        |\\
+        ========
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |\\
+        ========
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |
+        ========
+        """,
+        """
+        |/
+        |
+        |
+        |
+        |
+        |
+        ========
+        """,
+
+        """
+        |
+        |
+        |
+        |
+        |
+        ========
+        """,
+        """
+        """
+    ]
+    return lives_left[lives]
 
 
 
