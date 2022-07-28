@@ -1,9 +1,11 @@
 # HANG-HANGMAN
+
+Hang-Hangman is a word guessing game .
+The user will be given the game rules , a level choice to play the game at Easy , Medium or Hard.
+The user can try to guess the word by inputting letters, if the letter is wrong a visual of the traditional hangman man will start to appear, if the letter is in the word the letter is shown and another guess can be made. Until either all lives are used or the game is won.
+The aim is to supply a fun word guessing game to the user.
+
 ![amiresponsive]()
-
-INTRODUCTION & AM I RESPONSIVE GO HERE 
-
-
 
 ## How to play
 
