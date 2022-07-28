@@ -74,18 +74,18 @@ def select_game_level():
         options = input("\n ").upper()
         if options == "E":
             difficulty = True
-            num_lives = 10
+            num_lives = 12
             return num_lives
         elif options == "M":
             difficulty = True
-            num_lives = 7
+            num_lives = 10
             return num_lives
         elif options == "H":
             difficulty = True
-            num_lives = 5
+            num_lives = 8
             return num_lives
         else:
-            print(f"{Fore.RED+Style.BRIGHT}Please select a level E , M or H to make your Choice")
+            print(f"{Fore.RED+Style.BRIGHT}Please select a level E , M or H to make your Game Level Choice")
     
 
 def get_random_word():
@@ -207,12 +207,79 @@ def hangman_lives(lives):
     return lives_left[lives]
 
 
+def run_game(word, num_lives):
+    """
+    Runs the Hang-Hangman game.
+    Hang-Hangman is based around the YouTube video https://www.youtube.com/watch?v=m4nEnsavl6w
+    """
+    word_dictonary = "_" * len(word)
+    game_over = False
+    guesses = []
+    lives = num_lives
+    print("\n")    
+    print(f"Lives: {lives}\n")
+    print(f"The word to guess: " + " ".join(word_dictonary) + "\n")
+
+    while not game_over and lives > 0:
+        user_try = input(" Guess a letter:\n ").upper()
+        try:
+            if len(user_try) > 1:
+                raise ValueError(f" You can only guess 1 letter at a time, you guessed {len(user_try)} letter")
+
+            elif not user_try.isalpha():
+                raise ValueError(f"You can only guess letters, you guessed {(user_try)},which is not a letter")
+
+            elif len(user_try) == 1 and user_try.isalpha():
+                if user_try in guesses:
+                    raise ValueError(f" You have already guessed {(user_try)}")
+
+                elif user_try not in word:
+
+                    print(f"{(user_try)}is not in the word. Sorry You Lose a Life!")
+                                        
+                    guesses.append(user_try)
+                    lives -= 1
+
+                else:
+
+                    print(f"{user_try} is in the word. Well done!")                              
+
+                    guesses.append(user_try)
+                    word_dictonary_list = list(word_dictonary)
+                    indices = [i for i, letter in enumerate(word)
+                               if letter == user_try]
+                    for index in indices:
+                        word_dictonary_list[index] = user_try
+                        word_dictonary = "".join(word_dictonary_list)
+                    if "_" not in word_dictonary:
+                        game_over = True
+
+        except ValueError as e:
+            
+            print(f"{e}.\n Please try again. :D\n")
+            continue
+
+        print(hangman_lives(lives))
+
+        if lives > 0:            
+            print(f"Lives: {lives}\n")
+            print(f"The word to guess: " + " ".join(word_dictonary) + "\n")
+            print(f"Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
+
+    if game_over:
+        print(f"Congratulations! YOU WON !")
+
+    else:
+        print(f"The word you had to Guess was {word}")
+
+
 def main():
     """
-    Run all program functions
+    Run all program functions as on Game
     """
     game_intro()
     hangman_rules()
-    select_game_level() 
+    select_game_level()
+    run_game() 
 
 main()
