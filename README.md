@@ -8,14 +8,33 @@ The aim is to supply a fun word guessing game to the user.
 ![amiresponsive]()
 
 # Planning Of Hang-Hangman
-I used a flow chart to follow the path I wished to code the game in.
-What I wanted the user to see and be able to do .
-What I wanted the user not to be able to see but the program to do .
-I wanted the game to be easy to use have easy to folow instructions with a logical flow to the game.
-I wanted the game to give feed back to the user if the instructions where not followed correctly or if incorrect information was input by accident.
-I wanted the game to have a bit of color to it to give it a more fun look and to show with the colours instuctions , correct input and incorrect input.
+
+* When Planning what I thought about and wanted in the game.
+
+  + What I wanted the user to see and be able to do .
+  + What I wanted the user not to be able to see but the program to do .
+  + I wanted the game to be easy to use have easy to folow instructions with a logical flow to the  game.
+  + I wanted the game to give feed back to the user if the instructions where not followed correctly or if incorrect information was input by accident.
+  + I wanted the game to have a bit of color to it to give it a more fun look and to show with the colours instuctions , correct input and incorrect input.
+
+* For the User
+
+  + A nice Introduction
+  + Easy to Follow Instructions
+  + Clear information to make choices
+  + Levels in the Game to keep it Interesting
+  + Fun to Play  
 
 # Flowchart
+
+* The logical flow of how I was going to implement the coding of the game
+
+  + Where to use inputs & check inputs.  
+  + Where to give user feed back.
+  + Where to give choices and direct of game from those choices.
+  + Check the logic of the game lay out in order to code accordingly.
+ 
+
 ![hangman-flowchart](./assest/readmeimages/hangman-flowchart.png)
 
 # Features
