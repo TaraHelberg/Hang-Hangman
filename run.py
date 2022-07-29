@@ -47,6 +47,34 @@ def game_intro():
             break
 
 
+def start_game():
+    """
+    Starts the game off with options of:
+    1 to play right away
+    2 to select level of play
+    3 to see the game Rules    
+    """
+    print("Press 1 to Start playing Hang-Hangman")
+    print("Press 2 to select the level to play at")
+    print("Press 3 to read The Hang-Hangman Rules")
+    start = False
+    while not start:
+        choice = input("\n")
+        if choice == "1":
+           start = True
+           level = "default"
+           return level
+
+        elif choice == "2":
+             start = True                      
+
+        elif choice == "3":
+             hangman_rules()
+
+        else:
+              print(f"{Fore.RED+Style.BRIGHT}Please select a level 1 , 2 or 3 to make your Choice")               
+            
+
 def hangman_rules():
     """
     Explains to the User how to play the game.      
@@ -58,6 +86,9 @@ def hangman_rules():
     print(f"{Fore.BLUE+Style.BRIGHT}Your Hang-Hangman will then start to build.")
     print(f"{Fore.BLUE+Style.BRIGHT}When you reach 0 lives your will be HANGED !")
     print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game to play again and WIN :D ")
+    menu = input("Press Enter to return to The Menu")
+    print("\n")
+    main()
 
 
 def select_game_level():
@@ -69,19 +100,19 @@ def select_game_level():
     print("Press E for Easy")
     print("Press M for Medium")
     print("Press H for Hard")
-    difficulty = False
-    while not difficulty:
+    level = False
+    while not level:
         options = input("\n ").upper()
         if options == "E":
-            difficulty = True
+            level = True
             num_lives = 12
             return num_lives
         elif options == "M":
-            difficulty = True
+            level = True
             num_lives = 10
             return num_lives
         elif options == "H":
-            difficulty = True
+            level = True
             num_lives = 8
             return num_lives
         else:
@@ -100,7 +131,7 @@ def get_random_word():
 
 def hangman_lives(lives):
     """
-    Displays Hang-Hangman visuals to show man been hung on wrong word letter choice
+    Displays Hang-Hangman visuals to show man been hung on letter not in word.  
     """
     lives_left = [
         """
@@ -278,8 +309,14 @@ def main():
     Run all program functions as on Game
     """
     game_intro()
-    hangman_rules()
-    select_game_level()
-    run_game() 
+    print(hangman_lives(0))
+    level = start_game()
+    if level == "default":
+        num_lives = 10
+    else:
+        num_lives = select_game_level()
 
+    word = get_random_word()
+    run_game(word, num_lives)  
+ 
 main()
