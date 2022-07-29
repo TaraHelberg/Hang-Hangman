@@ -232,6 +232,16 @@ def hangman_lives(lives):
         ========
         """,
         """
+        |
+        |
+        |
+        ========
+        """,
+        """
+        |
+        ========
+        """,
+        """
         """
     ]
     return lives_left[lives]
@@ -333,8 +343,7 @@ def main():
     """
     Run all program functions as on Game
     """
-    game_intro()
-    print(hangman_lives(0))
+    game_intro()   
     level = start_game()
     if level == "default":
         num_lives = 10
