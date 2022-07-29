@@ -62,8 +62,7 @@ def start_game():
         choice = input("\n")
         if choice == "1":
            start = True
-           level = "default"
-           return level
+           return "default"           
 
         elif choice == "2":
              start = True                      
@@ -88,7 +87,7 @@ def hangman_rules():
     print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game to play again and WIN :D ")
     menu = input("Press Enter to return to The Menu")
     print("\n")
-    main()
+    start_game()
 
 
 def select_game_level():
