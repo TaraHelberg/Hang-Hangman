@@ -304,6 +304,32 @@ def run_game(word, num_lives):
         print(f"The word you had to Guess was {word}")
 
 
+def restart_game():
+    """
+    Gives User the choice to Restart the Game or Return to Introduction
+    """
+    game_restart = False
+
+    while not game_restart:
+        restart = input(f"Would You Like To Play Again :) ?"
+                        f"Please Type Y or Yes & N for No")
+        try:
+            if restart == "Y":
+                game_restart = True   
+                start_game()
+
+            elif restart == "N":
+                  game_restart = True
+                  print("\n")
+                  main()
+
+            else:
+                raise ValueError(f"{Fore.RED+Style.BRIGHT}Please type either Y or N to make your Choice . You typed{(restart)}")
+
+        except ValueError as e:
+            print(f"{Fore.RED+Style.BRIGHT} Please Try again Thank You :D")             
+                                  
+
 def main():
     """
     Run all program functions as on Game
