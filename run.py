@@ -16,8 +16,7 @@ def game_intro():
     and prints Hello users name 
     """
     print(
-        f"""{Fore.BLUE+Style.BRIGHT}
-        
+        f"""{Fore.BLUE+Style.BRIGHT}        
          _   _
         | | | | __ _ _ __   __ _ 
         | |_| |/ _` | '_ \\ / _` | 
@@ -61,30 +60,36 @@ def start_game():
     while not start:
         choice = input("\n")
         if choice == "1":
-           start = True
-           return "default"           
+            start = True
+            return "default"           
 
         elif choice == "2":
-             start = True                      
+            start = True                      
 
         elif choice == "3":
-             hangman_rules()
-             break
+            hangman_rules()
+            break
         else:
-              print(f"{Fore.RED+Style.BRIGHT}Please select a level 1 , 2 or 3 to make your Choice")               
+            print(f"{Fore.RED+Style.BRIGHT}Please select a level"
+                  f"1 , 2 or 3 to make your Choice")               
             
 
 def hangman_rules():
     """
-    Explains to the User how to play the game.      
+    Explains to the User how to play the game. 
     """
-    print(f"{Fore.BLUE+Style.BRIGHT}Welcome to Hang-Hangman How to play Rules:D.")
+    print(f"{Fore.BLUE+Style.BRIGHT}Welcome to Hang-Hangman!"
+          f"How to play Rules :D.")
     print(f"{Fore.BLUE+Style.BRIGHT}This is a guess the word game.")
-    print(f"{Fore.BLUE+Style.BRIGHT}Guess 1 letter at a time or guess the entire word !")
-    print(f"{Fore.BLUE+Style.BRIGHT}If you guess the wrong letter you loose a life :( Sorry.")
-    print(f"{Fore.BLUE+Style.BRIGHT}Your Hang-Hangman will then start to build.")
-    print(f"{Fore.BLUE+Style.BRIGHT}When you reach 0 lives your will be HANGED !")
-    print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game to play again and WIN :D ")
+    print(f"{Fore.BLUE+Style.BRIGHT}Guess 1 letter at a time."
+          f" but you can guess the word !")
+    print(f"{Fore.BLUE+Style.BRIGHT}If you guess the wrong letter."
+          f" you loose a life :( Sorry.")
+    print(f"{Fore.BLUE+Style.BRIGHT}Your Hangman will then start to build.")
+    print(f"{Fore.BLUE+Style.BRIGHT}When you reach 0 lives :("
+          f" you will be HANGED!")
+    print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game!"
+          f"Play again and WIN :D ")
     menu = input("Press Enter to return to The Menu")
     print("\n")
     start_game()
@@ -115,13 +120,15 @@ def select_game_level():
             num_lives = 8
             return num_lives
         else:
-            print(f"{Fore.RED+Style.BRIGHT}Please select a level E , M or H to make your Game Level Choice")
+            print(f"{Fore.RED+Style.BRIGHT}Please select a level E , M or H" 
+                  f"to make your Game Level Choice")
     
 
 def get_random_word():
     """
     Picks a random word from words.txt for hangman word to be guessed by user.
-    How to found on https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
+    How to found on stckoverflow:
+    https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
     adpated for use in Hang-Hangman
     """
     random_word = random.choice(open("words.txt", "r").read().split('\n'))
@@ -250,7 +257,8 @@ def hangman_lives(lives):
 def run_game(word, num_lives):
     """
     Runs the Hang-Hangman game.
-    Hang-Hangman is based around the YouTube video https://www.youtube.com/watch?v=m4nEnsavl6w
+    Hang-Hangman is based around the YouTube video
+    https://www.youtube.com/watch?v=m4nEnsavl6w
     """
     word_dictonary = "_" * len(word)
     game_over = False
@@ -264,10 +272,12 @@ def run_game(word, num_lives):
         user_try = input(" Guess a letter:\n ").upper()
         try:
             if len(user_try) > 1:
-                raise ValueError(f" You can only guess 1 letter at a time, you guessed {len(user_try)} letter")
+                raise ValueError(f" You can only guess 1 letter at a time,"
+                                 f"you guessed {len(user_try)} letter")
 
             elif not user_try.isalpha():
-                raise ValueError(f"You can only guess letters, you guessed {(user_try)},which is not a letter")
+                raise ValueError(f"You can only guess letters,"
+                                 f"you guessed {(user_try)},is not a letter")
 
             elif len(user_try) == 1 and user_try.isalpha():
                 if user_try in guesses:
@@ -275,7 +285,8 @@ def run_game(word, num_lives):
 
                 elif user_try not in word:
 
-                    print(f"{(user_try)}is not in the word. Sorry You Lose a Life!")
+                    print(f"{(user_try)}is not in the word."
+                          f"Sorry You Lose a Life!")
                                         
                     guesses.append(user_try)
                     lives -= 1
@@ -307,8 +318,7 @@ def run_game(word, num_lives):
             print(f"Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
-        print(f"Congratulations! YOU WON !")        
-        
+        print(f"Congratulations! YOU WON !")         
 
     else:
         print(f"The word you had to Guess was {word}")
@@ -329,8 +339,7 @@ def restart_game():
             if restart == "Y":
                 game_restart = True
                 word = get_random_word()
-                run_game(word, num_lives)               
-                
+                run_game(word, num_lives)                
 
             elif restart == "N":
                 game_restart = True
@@ -338,7 +347,8 @@ def restart_game():
                 main()
 
             else:
-                raise ValueError(f"{Fore.RED+Style.BRIGHT}Please type either Y or N to make your Choice . You typed{(restart)}")
+                raise ValueError(f"{Fore.RED+Style.BRIGHT}Please type either Y or N,"
+                                 f"to make your Choice . You typed{(restart)}")
 
         except ValueError as e:
             print(f"{Fore.RED+Style.BRIGHT} Please Try again Thank You :D")             
@@ -348,7 +358,7 @@ def main():
     """
     Run all program functions as on Game
     """
-    game_intro()   
+    game_intro() 
     level = start_game()
     if level == "default":
         num_lives = 10
