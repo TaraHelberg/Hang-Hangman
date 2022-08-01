@@ -69,7 +69,7 @@ def start_game():
 
         elif choice == "3":
              hangman_rules()
-
+             break
         else:
               print(f"{Fore.RED+Style.BRIGHT}Please select a level 1 , 2 or 3 to make your Choice")               
             
@@ -307,10 +307,13 @@ def run_game(word, num_lives):
             print(f"Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
-        print(f"Congratulations! YOU WON !")
+        print(f"Congratulations! YOU WON !")        
+        
 
     else:
         print(f"The word you had to Guess was {word}")
+
+    restart_game()
 
 
 def restart_game():
@@ -320,17 +323,19 @@ def restart_game():
     game_restart = False
 
     while not game_restart:
-        restart = input(f"Would You Like To Play Again :) ?"
-                        f"Please Type Y or Yes & N for No")
+        restart = input(f"Would You Like To Play Again :) ? "
+                        f"Please Type Y for Yes & N for No  ")
         try:
             if restart == "Y":
-                game_restart = True   
-                start_game()
+                game_restart = True
+                word = get_random_word()
+                run_game(word, num_lives)               
+                
 
             elif restart == "N":
-                  game_restart = True
-                  print("\n")
-                  main()
+                game_restart = True
+                print("\n")
+                main()
 
             else:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}Please type either Y or N to make your Choice . You typed{(restart)}")
@@ -351,6 +356,7 @@ def main():
         num_lives = select_game_level()
 
     word = get_random_word()
-    run_game(word, num_lives)  
- 
+    run_game(word, num_lives)
+
+
 main()
