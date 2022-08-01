@@ -61,10 +61,11 @@ def start_game():
         choice = input("\n")
         if choice == "1":
             start = True
-            return "default"           
+            level = "default"
+            return level
 
         elif choice == "2":
-            start = True                      
+            start = True            
 
         elif choice == "3":
             hangman_rules()
@@ -78,10 +79,10 @@ def hangman_rules():
     """
     Explains to the User how to play the game. 
     """
-    print(f"{Fore.BLUE+Style.BRIGHT}Welcome to Hang-Hangman!"
+    print(f"{Fore.BLUE+Style.BRIGHT}Welcome to Hang-Hangman! "
           f"How to play Rules :D.")
     print(f"{Fore.BLUE+Style.BRIGHT}This is a guess the word game.")
-    print(f"{Fore.BLUE+Style.BRIGHT}Guess 1 letter at a time."
+    print(f"{Fore.BLUE+Style.BRIGHT}Guess 1 letter at a time or "
           f" but you can guess the word !")
     print(f"{Fore.BLUE+Style.BRIGHT}If you guess the wrong letter."
           f" you loose a life :( Sorry.")
@@ -90,7 +91,7 @@ def hangman_rules():
           f" you will be HANGED!")
     print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game!"
           f"Play again and WIN :D ")
-    menu = input("Press Enter to return to The Menu")
+    input("Enter to return to Menu \n")
     print("\n")
     start_game()
 
@@ -272,12 +273,10 @@ def run_game(word, num_lives):
         user_try = input(" Guess a letter:\n ").upper()
         try:
             if len(user_try) > 1:
-                raise ValueError(f" You can only guess 1 letter at a time,"
-                                 f"you guessed {len(user_try)} letter")
+                raise ValueError(f" You can only guess 1 letter at a time,you guessed {len(user_try)} letter")
 
             elif not user_try.isalpha():
-                raise ValueError(f"You can only guess letters,"
-                                 f"you guessed {(user_try)},is not a letter")
+                raise ValueError(f"You can only guess letters,you guessed {(user_try)},is not a letter")
 
             elif len(user_try) == 1 and user_try.isalpha():
                 if user_try in guesses:
@@ -285,8 +284,7 @@ def run_game(word, num_lives):
 
                 elif user_try not in word:
 
-                    print(f"{(user_try)}is not in the word."
-                          f"Sorry You Lose a Life!")
+                    print(f"{(user_try)}is not in the word.Sorry You Lose a Life!")
                                         
                     guesses.append(user_try)
                     lives -= 1
@@ -306,8 +304,7 @@ def run_game(word, num_lives):
                         game_over = True
 
         except ValueError as e:
-            
-            print(f"{e}.\n Please try again. :D\n")
+            print(f"{e}.\n Please try again. :D\n")            
             continue
 
         print(hangman_lives(lives))
@@ -318,7 +315,7 @@ def run_game(word, num_lives):
             print(f"Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
-        print("Congratulations! YOU WON !")         
+        print(f"Congratulations! YOU WON !")         
 
     else:
         print(f"The word you had to Guess was {word}")
