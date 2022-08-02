@@ -61,18 +61,17 @@ def start_game():
         choice = input("\n")
         if choice == "1":
             start = True
-            level = "default"
-            return level
-
+            return "default"
         elif choice == "2":
-            start = True         
-
+            start = True
+            num_lives = select_game_level()
+            word = get_random_word()
+            run_game(word, num_lives)            
         elif choice == "3":
             hangman_rules()
             input("Enter to return to Menu \n")
             print("\n")
             return start_game()                   
-
         else:
             print(f"{Fore.RED+Style.BRIGHT}Please select a level 1 , 2 or 3 to make your Choice")        
 
@@ -114,7 +113,7 @@ def select_game_level():
         elif options == "M":
             level = True
             num_lives = 10
-            return num_lives
+            return num_lives            
         elif options == "H":
             level = True
             num_lives = 8
@@ -333,13 +332,11 @@ def restart_game():
         try:
             if restart == "Y":
                 game_restart = True
-                start_game()            
-
+                start_game()
             elif restart == "N":
                 game_restart = True
                 print("\n")
                 main()
-
             else:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}Please type either Y or N, to make your Choice . You typed{(restart)}")
 
