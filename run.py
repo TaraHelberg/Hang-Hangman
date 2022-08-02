@@ -65,14 +65,16 @@ def start_game():
             return level
 
         elif choice == "2":
-            start = True            
+            start = True         
 
         elif choice == "3":
             hangman_rules()
+            input("Enter to return to Menu \n")
+            print("\n")
+            return start_game()                   
 
         else:
-            print(f"{Fore.RED+Style.BRIGHT}Please select a level"
-                  f"1 , 2 or 3 to make your Choice")        
+            print(f"{Fore.RED+Style.BRIGHT}Please select a level 1 , 2 or 3 to make your Choice")        
 
 
 def hangman_rules():
@@ -90,11 +92,8 @@ def hangman_rules():
     print(f"{Fore.BLUE+Style.BRIGHT}When you reach 0 lives :("
           f" you will be HANGED!")
     print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game!"
-          f"Play again and WIN :D ")
-    input("Enter to return to Menu \n")
-    print("\n")
-    start_game()
-
+          f"Play again and WIN :D ")  
+  
 
 def select_game_level():
     """
@@ -330,8 +329,7 @@ def restart_game():
     game_restart = False
 
     while not game_restart:
-        restart = input(f"Would You Like To Play Again :) ? "
-                        f"Please Type Y for Yes & N for No  ")
+        restart = input(f"Would You Like To Play Again :) ? Please Type Y for Yes & N for No")
         try:
             if restart == "Y":
                 game_restart = True
@@ -343,11 +341,10 @@ def restart_game():
                 main()
 
             else:
-                raise ValueError(f"{Fore.RED+Style.BRIGHT}Please type either Y or N,"
-                                 f"to make your Choice . You typed{(restart)}")
+                raise ValueError(f"{Fore.RED+Style.BRIGHT}Please type either Y or N, to make your Choice . You typed{(restart)}")
 
         except ValueError as e:
-            print(f"{Fore.RED+Style.BRIGHT} Please Try again Thank You :D")             
+            print(f"{Fore.RED+Style.BRIGHT} Please Try again Thank You :D")         
                                   
 
 def main():
