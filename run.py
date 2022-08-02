@@ -281,12 +281,13 @@ def run_game(word, num_lives):
                 if user_try in guesses:
                     raise ValueError(f" You have already guessed {(user_try)}")
                 elif user_try not in word:
-                    print(f"{(user_try)}is not in the word."
-                          f"Sorry You Lose a Life!")
+                    print(f"{(user_try)} is not in the word.")
+                    print(f"Sorry You Lose a Life!")
                     guesses.append(user_try)
                     lives -= 1
                 else:
                     print(f"{user_try} is in the word. Well done!")
+
                     guesses.append(user_try)
                     word_dictonary_list = list(word_dictonary)
                     indices = [i for i, letter in enumerate(word)
@@ -299,7 +300,7 @@ def run_game(word, num_lives):
 
         except ValueError as e:
             print(f"{e}.\n Please try again. :D\n")
-        continue
+            continue
 
         print(hangman_lives(lives))
 
