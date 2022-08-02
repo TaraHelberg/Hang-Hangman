@@ -101,9 +101,9 @@ def select_game_level():
     The user can select to play E for Easy, M for Medium or H for Hard.
     """
     print("Select the level you wish to play at.")
-    print("Press E for Easy")
-    print("Press M for Medium")
-    print("Press H for Hard")
+    print("Press E for Easy, 12 Lives")
+    print("Press M for Medium, 10 Lives")
+    print("Press H for Hard, 8 Lives")
     level = False
     while not level:
         options = input("\n ").upper()
