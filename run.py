@@ -344,7 +344,7 @@ def restart_game():
 
 def main():
     """
-    Run all program functions as on Game
+    Run all program functions used for the Game
     """
     game_intro()
     level = start_game()
