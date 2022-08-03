@@ -1,7 +1,7 @@
 import random
 """
 Used to make the words randomly selected
-for the Hang-Hangman word to guess by 
+for the Hang-Hangman word to guess by
 the user
 """
 import colorama
@@ -16,25 +16,34 @@ https://www.youtube.com/watch?v=u51Zjlnui4Y
 
 def game_intro():
     """
-    Game Name "Logo",Welcome's user,
+    Game Name "Logo"
+    Logo from https://patorjk.com/software/taag/#p=display&f=Pebbles&t=%20HANG%20-%0A%20HANGMAN
+    ,Welcome's user,
     request users name
     and prints Hello users name
     """
     print(
-        f"""{Fore.BLUE+Style.BRIGHT}
-         _   _
-        | | | | __ _ _ __   __ _
-        | |_| |/ _` | '_ \\ / _` |
-        |  _  | (_| | | | | (_| |    _______
-        |_| |_|\\__,_|_| |_|\\__, |
-                             |___/
-         _   _
-        | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __
-        | |_| |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\
-        |  _  | (_| | | | | (_| | | | | | | (_| | | | |
-        |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
-                            |___/
-        """
+        f"""{Fore.BLUE+Style.BRIGHT}       
+
+      o      O    Oo    o.     O  .oOOOo.                               
+      O      o   o  O   Oo     o .O     o                               
+      o      O  O    o  O O    O o                                      
+      OoOooOOo oOooOoOo O  o   o O                                      
+      o      O o      O O   o  O O   .oOOo       ooooooooo              
+      O      o O      o o    O O o.      O                              
+      o      o o      O o     Oo  O.    oO                              
+      o      O O.     O O     `o   `OooO'                               
+                                                                        
+                                                                        
+      o      O    Oo    o.     O  .oOOOo.  Oo      oO    Oo    o.     O 
+      O      o   o  O   Oo     o .O     o  O O    o o   o  O   Oo     o 
+      o      O  O    o  O O    O o         o  o  O  O  O    o  O O    O 
+      OoOooOOo oOooOoOo O  o   o O         O   Oo   O oOooOoOo O  o   o 
+      o      O o      O O   o  O O   .oOOo O        o o      O O   o  O 
+      O      o O      o o    O O o.      O o        O O      o o    O O 
+      o      o o      O o     Oo  O.    oO o        O o      O o     Oo 
+      o      O O.     O O     `o   `OooO'  O        o O.     O O     `o 
+     """
     )
     print("Welcome to Hang-Hangman")
     print("We hope you have fun!")
