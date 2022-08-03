@@ -12,8 +12,11 @@ Python colorama , color text information
 and how to use gotten from the below video
 https://www.youtube.com/watch?v=u51Zjlnui4Y
 """
-import constants
 from constants import lives_left
+"""
+Hangman Lives visual from constants.py
+"""
+from constants import RULES
 
 
 def game_intro():
@@ -25,14 +28,13 @@ def game_intro():
     and prints Hello users name
     """
     print(
-        f"""{Fore.BLUE+Style.BRIGHT}    
-        
+        f"""{Fore.BLUE+Style.BRIGHT}
         HH   HH   AAA   NN   NN   GGGG
         HH   HH  AAAAA  NNN  NN  GG  GG
         HHHHHHH AA   AA NN N NN GG         _____
         HH   HH AAAAAAA NN  NNN GG   GG
-        HH   HH AA   AA NN   NN  GGGGGG                          
-                                   
+        HH   HH AA   AA NN   NN  GGGGGG
+        
         HH   HH   AAA   NN   NN   GGGG  MM    MM   AAA   NN   NN
         HH   HH  AAAAA  NNN  NN  GG  GG MMM  MMM  AAAAA  NNN  NN
         HHHHHHH AA   AA NN N NN GG      MM MM MM AA   AA NN N NN
@@ -90,18 +92,8 @@ def hangman_rules():
     """
     Explains to the User how to play the game.
     """
-    print(f"{Fore.BLUE+Style.BRIGHT}Welcome to Hang-Hangman! ")
-    print(f"{Fore.BLUE+Style.BRIGHT}How to play Rules :D.")
-    print(f"{Fore.BLUE+Style.BRIGHT}This is a guess the word game.")
-    print(f"{Fore.BLUE+Style.BRIGHT}Guess 1 letter at a time or "
-          f"you can guess the word !")
-    print(f"{Fore.BLUE+Style.BRIGHT}If you guess the wrong letter."
-          f"You loose a life :( Sorry.")
-    print(f"{Fore.BLUE+Style.BRIGHT}Your Hangman will then start to build.")
-    print(f"{Fore.BLUE+Style.BRIGHT}When you reach 0 lives :("
-          f" You will be HANGED!")
-    print(f"{Fore.BLUE+Style.BRIGHT}Don't worry you can restart the game!"
-          f"Play again and WIN :D ")
+    for rule in RULES:
+        print(f"{Fore.BLUE+Style.BRIGHT}{rule}")
 
 
 def select_game_level():
@@ -164,7 +156,7 @@ def run_game(word, num_lives):
     lives = num_lives
     print("\n")
     print(f"Lives: {lives}\n")
-    print(f"The word to guess: " + " ".join(word_dictonary) + "\n")
+    print("The word to guess: " + " ".join(word_dictonary) + "\n")
 
     while not game_over and lives > 0:
         user_try = input(" Guess a letter:\n ").upper()
@@ -180,7 +172,7 @@ def run_game(word, num_lives):
                     raise ValueError(f" You have already guessed {(user_try)}")
                 elif user_try not in word:
                     print(f"{(user_try)} is not in the word.")
-                    print(f"Sorry You Lose a Life!")
+                    print(f"{Fore.RED+Style.BRIGHT}Sorry You Lose a Life!")
                     guesses.append(user_try)
                     lives -= 1
                 else:
@@ -204,11 +196,11 @@ def run_game(word, num_lives):
 
         if lives > 0:
             print(f"Lives: {lives}\n")
-            print(f"The word to guess: " + " ".join(word_dictonary) + "\n")
-            print(f"Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
+            print("The word to guess: " + " ".join(word_dictonary) + "\n")
+            print("Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
-        print(f"Congratulations! YOU WON !")
+        print(f"{Fore.GREEN+Style.BRIGHT}Congratulations! YOU WON !")
     else:
         print(f"The word you had to Guess was {word}")
 
@@ -222,7 +214,8 @@ def restart_game():
     game_restart = False
 
     while not game_restart:
-        restart = input(f"Would You Like To Play Again :) ?"
+        restart = input(f"{Fore.GREEN+Style.BRIGHT}"
+                        f"Would You Like To Play Again :) ?"
                         f"Please Type Y for Yes & N for No: ")
         try:
             if restart == "Y":
