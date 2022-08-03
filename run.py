@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=u51Zjlnui4Y
 def game_intro():
     """
     Game Name "Logo"
-    Logo from https://patorjk.com/software/taag/#p=display&f=Pebbles&t=%20HANG%20-%0A%20HANGMAN
+    Logo from patorjk.com
     ,Welcome's user,
     request users name
     and prints Hello users name

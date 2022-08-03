@@ -54,6 +54,7 @@ The aim is to supply a fun word guessing game to the user.
     + GitHub for my repository 
     + Git used to code within and provided backups of all my code.
     + Hourokapp for project deployment
+    + Patorjik.com for the Game Logo https://patorjk.com/software/taag/#p=display&f=Letters&t=HANG%20-%0AHANGMAN
      
 # Testing
 * Testing During development of the project was done through out the project to see how the project looked and felt within the Git Terminal using python3. run.py
