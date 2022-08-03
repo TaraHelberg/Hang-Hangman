@@ -23,27 +23,20 @@ def game_intro():
     and prints Hello users name
     """
     print(
-        f"""{Fore.BLUE+Style.BRIGHT}       
-
-      o      O    Oo    o.     O  .oOOOo.                               
-      O      o   o  O   Oo     o .O     o                               
-      o      O  O    o  O O    O o                                      
-      OoOooOOo oOooOoOo O  o   o O                                      
-      o      O o      O O   o  O O   .oOOo       ooooooooo              
-      O      o O      o o    O O o.      O                              
-      o      o o      O o     Oo  O.    oO                              
-      o      O O.     O O     `o   `OooO'                               
-                                                                        
-                                                                        
-      o      O    Oo    o.     O  .oOOOo.  Oo      oO    Oo    o.     O 
-      O      o   o  O   Oo     o .O     o  O O    o o   o  O   Oo     o 
-      o      O  O    o  O O    O o         o  o  O  O  O    o  O O    O 
-      OoOooOOo oOooOoOo O  o   o O         O   Oo   O oOooOoOo O  o   o 
-      o      O o      O O   o  O O   .oOOo O        o o      O O   o  O 
-      O      o O      o o    O O o.      O o        O O      o o    O O 
-      o      o o      O o     Oo  O.    oO o        O o      O o     Oo 
-      o      O O.     O O     `o   `OooO'  O        o O.     O O     `o 
-     """
+        f"""{Fore.BLUE+Style.BRIGHT}    
+        
+        HH   HH   AAA   NN   NN   GGGG
+        HH   HH  AAAAA  NNN  NN  GG  GG
+        HHHHHHH AA   AA NN N NN GG         _____
+        HH   HH AAAAAAA NN  NNN GG   GG
+        HH   HH AA   AA NN   NN  GGGGGG                          
+                                   
+        HH   HH   AAA   NN   NN   GGGG  MM    MM   AAA   NN   NN
+        HH   HH  AAAAA  NNN  NN  GG  GG MMM  MMM  AAAAA  NNN  NN
+        HHHHHHH AA   AA NN N NN GG      MM MM MM AA   AA NN N NN
+        HH   HH AAAAAAA NN  NNN GG   GG MM    MM AAAAAAA NN  NNN
+        HH   HH AA   AA NN   NN  GGGGGG MM    MM AA   AA NN   NN
+        """
     )
     print("Welcome to Hang-Hangman")
     print("We hope you have fun!")
