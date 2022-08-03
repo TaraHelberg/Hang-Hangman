@@ -1,7 +1,6 @@
 """
 Explains to the User how to play the game.
 """
-
 RULES = [
     "Welcome to Hang-Hangman!",
     "How to play Rules :D.",

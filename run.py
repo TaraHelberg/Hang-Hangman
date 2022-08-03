@@ -1,22 +1,12 @@
-import random
 """
-Used to make the words randomly selected
-for the Hang-Hangman word to guess by
-the user
+Used for libraries and imports
 """
-import colorama
-from colorama import Fore, Back, Style
+import random    # Randomly selects word for Game
+import colorama  # Adds color to game text
+from colorama import Fore, Style
+from constants import lives_left   # Hangman Lives visual from constants.py
+from constants import RULES   # Hangman Rules from constants.py
 colorama.init(autoreset=True)
-""""
-Python colorama , color text information
-and how to use gotten from the below video
-https://www.youtube.com/watch?v=u51Zjlnui4Y
-"""
-from constants import lives_left
-"""
-Hangman Lives visual from constants.py
-"""
-from constants import RULES
 
 
 def game_intro():
@@ -34,7 +24,8 @@ def game_intro():
         HHHHHHH AA   AA NN N NN GG         _____
         HH   HH AAAAAAA NN  NNN GG   GG
         HH   HH AA   AA NN   NN  GGGGGG
-        
+        """
+        f"""
         HH   HH   AAA   NN   NN   GGGG  MM    MM   AAA   NN   NN
         HH   HH  AAAAA  NNN  NN  GG  GG MMM  MMM  AAAAA  NNN  NN
         HHHHHHH AA   AA NN N NN GG      MM MM MM AA   AA NN N NN
@@ -140,7 +131,7 @@ def hangman_lives(lives):
     """
     Displays Hang-Hangman visuals to show man been hung on letter not in word.
     """
-    for life in lives_left:
+    for _ in lives_left:
         return lives_left[lives]
 
 
@@ -162,21 +153,26 @@ def run_game(word, num_lives):
         user_try = input(" Guess a letter:\n ").upper()
         try:
             if len(user_try) > 1:
-                raise ValueError(f"You can only guess 1 letter at a time,"
+                raise ValueError(f"{Fore.RED+Style.BRIGHT}"
+                                 f"You can only guess 1 letter at a time,"
                                  f"you guessed {len(user_try)} letter")
             elif not user_try.isalpha():
-                raise ValueError(f"You can only guess letters,"
+                raise ValueError(f"{Fore.RED+Style.BRIGHT}"
+                                 f"You can only guess letters,"
                                  f"you guessed {(user_try)},is not a letter")
             elif len(user_try) == 1 and user_try.isalpha():
                 if user_try in guesses:
-                    raise ValueError(f" You have already guessed {(user_try)}")
+                    raise ValueError(f"{Fore.RED+Style.BRIGHT}"
+                                     f"You have already guessed {(user_try)}")
                 elif user_try not in word:
-                    print(f"{(user_try)} is not in the word.")
+                    print(f"{Fore.RED+Style.BRIGHT}"
+                          f"{(user_try)} is not in the word.")
                     print(f"{Fore.RED+Style.BRIGHT}Sorry You Lose a Life!")
                     guesses.append(user_try)
                     lives -= 1
                 else:
-                    print(f"{user_try} is in the word. Well done!")
+                    print(f"{Fore.GREEN+Style.BRIGHT}"
+                          f"{user_try} is in the word. Well done!")
 
                     guesses.append(user_try)
                     word_dictonary_list = list(word_dictonary)
@@ -216,7 +212,7 @@ def restart_game():
     while not game_restart:
         restart = input(f"{Fore.GREEN+Style.BRIGHT}"
                         f"Would You Like To Play Again :) ?"
-                        f"Please Type Y for Yes & N for No: ")
+                        f"Please Type Y for Yes & N for No: ").upper()
         try:
             if restart == "Y":
                 game_restart = True
@@ -236,7 +232,7 @@ def restart_game():
 
 def main():
     """
-    Run all program functions used for the Game
+    Runs all program functions used for the Game
     """
     game_intro()
     level = start_game()
