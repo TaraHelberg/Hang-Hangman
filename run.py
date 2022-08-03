@@ -12,6 +12,8 @@ Python colorama , color text information
 and how to use gotten from the below video
 https://www.youtube.com/watch?v=u51Zjlnui4Y
 """
+import constants
+from constants import lives_left
 
 
 def game_intro():
@@ -146,119 +148,8 @@ def hangman_lives(lives):
     """
     Displays Hang-Hangman visuals to show man been hung on letter not in word.
     """
-    lives_left = [
-        """
-        ___________
-        |/        |
-        |         O
-        |        /|\\
-        |         |
-        |        / \\
-        |\\
-        ========
-        """,
-        """
-        ___________
-        |/        |
-        |         O
-        |        /|\\
-        |         |
-        |        /
-        |\\
-        ========
-        """,
-        """
-        __________
-        |/        |
-        |         O
-        |        /|\\
-        |         |
-        |
-        |\\
-        ========
-        """,
-        """
-        __________
-        |/        |
-        |         O
-        |        /|
-        |         |
-        |
-        |\\
-        ========
-        """,
-        """
-        __________
-        |/        |
-        |         O
-        |         |
-        |         |
-        |
-        |\\
-        ========
-        """,
-        """
-        __________
-        |/        |
-        |         O
-        |
-        |
-        |
-        |\\
-        ========
-        """,
-        """
-        __________
-        |/
-        |
-        |
-        |
-        |
-        |\\
-        ========
-        """,
-        """
-        __________
-        |/
-        |
-        |
-        |
-        |
-        |
-        ========
-        """,
-        """
-        |/
-        |
-        |
-        |
-        |
-        |
-        ========
-        """,
-
-        """
-        |
-        |
-        |
-        |
-        |
-        ========
-        """,
-        """
-        |
-        |
-        |
-        ========
-        """,
-        """
-        |
-        ========
-        """,
-        """
-        """
-    ]
-    return lives_left[lives]
+    for life in lives_left:
+        return lives_left[lives]
 
 
 def run_game(word, num_lives):
