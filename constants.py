@@ -1,4 +1,24 @@
 """
+Game Name "Logo" Logo from patorjk.com
+,Welcome's user
+"""
+LOGO = [
+        """
+        HH   HH   AAA   NN   NN   GGGG
+        HH   HH  AAAAA  NNN  NN  GG  GG
+        HHHHHHH AA   AA NN N NN GG         _____
+        HH   HH AAAAAAA NN  NNN GG   GG
+        HH   HH AA   AA NN   NN  GGGGGG
+        """
+        """
+        HH   HH   AAA   NN   NN   GGGG  MM    MM   AAA   NN   NN
+        HH   HH  AAAAA  NNN  NN  GG  GG MMM  MMM  AAAAA  NNN  NN
+        HHHHHHH AA   AA NN N NN GG      MM MM MM AA   AA NN N NN
+        HH   HH AAAAAAA NN  NNN GG   GG MM    MM AAAAAAA NN  NNN
+        HH   HH AA   AA NN   NN  GGGGGG MM    MM AA   AA NN   NN
+        """
+]
+"""
 Explains to the User how to play the game.
 """
 RULES = [

@@ -4,6 +4,7 @@ Used for libraries and imports
 import random    # Randomly selects word for Game
 import colorama  # Adds color to game text
 from colorama import Fore, Style
+from constants import LOGO   # Hangman introduction Logo from constants.py
 from constants import lives_left   # Hangman Lives visual from constants.py
 from constants import RULES   # Hangman Rules from constants.py
 colorama.init(autoreset=True)
@@ -17,22 +18,9 @@ def game_intro():
     request users name
     and prints Hello users name
     """
-    print(
-        f"""{Fore.BLUE+Style.BRIGHT}
-        HH   HH   AAA   NN   NN   GGGG
-        HH   HH  AAAAA  NNN  NN  GG  GG
-        HHHHHHH AA   AA NN N NN GG         _____
-        HH   HH AAAAAAA NN  NNN GG   GG
-        HH   HH AA   AA NN   NN  GGGGGG
-        """
-        f"""
-        HH   HH   AAA   NN   NN   GGGG  MM    MM   AAA   NN   NN
-        HH   HH  AAAAA  NNN  NN  GG  GG MMM  MMM  AAAAA  NNN  NN
-        HHHHHHH AA   AA NN N NN GG      MM MM MM AA   AA NN N NN
-        HH   HH AAAAAAA NN  NNN GG   GG MM    MM AAAAAAA NN  NNN
-        HH   HH AA   AA NN   NN  GGGGGG MM    MM AA   AA NN   NN
-        """
-    )
+    for logo in LOGO:
+        print(f"{Fore.BLUE+Style.BRIGHT}{logo}")
+
     print("Welcome to Hang-Hangman")
     print("We hope you have fun!")
     name = None
@@ -51,7 +39,7 @@ def game_intro():
 def start_game():
     """
     Starts the game off with options of:
-    1 to play right away
+    1 to play right away, default level medium
     2 to select level of play
     3 to see the game Rules
     """
@@ -184,8 +172,8 @@ def run_game(word, num_lives):
                     if "_" not in word_dictonary:
                         game_over = True
 
-        except ValueError as e:
-            print(f"{e}.\n Please try again. :D\n")
+        except ValueError as e_values:
+            print(f"{e_values}.\n Please try again. :D\n")
             continue
 
         print(hangman_lives(lives))
@@ -211,7 +199,7 @@ def restart_game():
 
     while not game_restart:
         restart = input(f"{Fore.GREEN+Style.BRIGHT}"
-                        f"Would You Like To Play Again :) ?"
+                        f"Would You Like To Play Again :) ? "
                         f"Please Type Y for Yes & N for No: ").upper()
         try:
             if restart == "Y":
@@ -226,8 +214,9 @@ def restart_game():
                                  f"Please type either Y or N,"
                                  f"to make your Choice.You typed{(restart)}")
 
-        except ValueError as e:
-            print(f"{Fore.RED+Style.BRIGHT} Please Try again Thank You :D")
+        except ValueError as e_values:
+            print(f"{e_values}.\n{Fore.RED+Style.BRIGHT}"
+                  f"Please Try again Thank You :D\n")
 
 
 def main():
