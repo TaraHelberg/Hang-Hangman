@@ -49,7 +49,11 @@ def start_game():
         choice = input("\n")
         if choice == "1":
             start = True
-            return "default"
+            level = "default"
+            num_lives = 10
+            word = get_random_word()
+            run_game(word, num_lives)
+            return level
         elif choice == "2":
             start = True
             num_lives = select_game_level()
@@ -61,7 +65,7 @@ def start_game():
             print("\n")
             return start_game()
         else:
-            print(f"{Fore.RED+Style.BRIGHT}Please select a level"
+            print(f"{Fore.RED+Style.BRIGHT}Please select a level "
                   f"1 , 2 or 3 to make your Choice")
 
 
@@ -96,7 +100,7 @@ def select_game_level():
             num_lives = 8
             return num_lives
         else:
-            print(f"{Fore.RED+Style.BRIGHT}Please select a level E , M or H"
+            print(f"{Fore.RED+Style.BRIGHT}Please select a level E , M or H "
                   f"to make your Game Level Choice")
 
 
@@ -107,7 +111,9 @@ def get_random_word():
     https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
     adpated for use in Hang-Hangman
     """
-    random_word = random.choice(open("words.txt", "r").read().split('\n'))
+    random_word = random.choice(
+        open("words.txt", "r", encoding="utf8").read().split('\n')
+        )
     return random_word.upper()
 
 
