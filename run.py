@@ -20,9 +20,6 @@ def game_intro():
     """
     for logo in LOGO:
         print(f"{Fore.BLUE+Style.BRIGHT}{logo}")
-
-    print("Welcome to Hang-Hangman")
-    print("We hope you have fun!")
     name = None
 
     while True:

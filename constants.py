@@ -1,6 +1,5 @@
 """
-Game Name "Logo" Logo from patorjk.com
-,Welcome's user
+Game Name "Logo" Logo from patorjk.com & Welcome's user
 """
 LOGO = [
         """
@@ -16,7 +15,9 @@ LOGO = [
         HHHHHHH AA   AA NN N NN GG      MM MM MM AA   AA NN N NN
         HH   HH AAAAAAA NN  NNN GG   GG MM    MM AAAAAAA NN  NNN
         HH   HH AA   AA NN   NN  GGGGGG MM    MM AA   AA NN   NN
-        """
+        """,
+        "Welcome to Hang-Hangman",
+        "We hope you have fun!"
 ]
 """
 Explains to the User how to play the game.
