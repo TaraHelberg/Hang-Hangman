@@ -45,6 +45,15 @@ RULES = [
     "Play again and WIN :D "
     ]
 """
+Lets the User select the level of Hang-Hangman.
+"""
+GAMELEVEL = [
+    "Select the level you wish to play at.",
+    "Press E for Easy, 12 Lives",
+    "Press M for Medium, 10 Lives",
+    "Press H for Hard, 8 Lives"
+]
+"""
 Displays Hang-Hangman visuals to show man been hung on letter not in word.
 """
 lives_left = [

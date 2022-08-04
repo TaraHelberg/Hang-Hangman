@@ -5,8 +5,9 @@ import random    # Randomly selects word for Game
 import colorama  # Adds color to game text
 from colorama import Fore, Style
 from constants import LOGO   # Hangman introduction Logo from constants.py
-from constants import OPTIONS   # Hangman Menu Options selection from constants.py
+from constants import OPTIONS   # Hangman Options selection from constants.py
 from constants import lives_left   # Hangman Lives visual from constants.py
+from constants import GAMELEVEL   # Hangman level selection from constatnts.py
 from constants import RULES   # Hangman Rules from constants.py
 colorama.init(autoreset=True)
 
@@ -77,10 +78,8 @@ def select_game_level():
     Lets the User select the level of Hang-Hangman.
     The user can select to play E for Easy, M for Medium or H for Hard.
     """
-    print("Select the level you wish to play at.")
-    print("Press E for Easy, 12 Lives")
-    print("Press M for Medium, 10 Lives")
-    print("Press H for Hard, 8 Lives")
+    for gamelevel in GAMELEVEL:
+        print(f"{Fore.BLUE+Style.BRIGHT}{gamelevel}")
     level = False
     while not level:
         options = input("\n ").upper()
