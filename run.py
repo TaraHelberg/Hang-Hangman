@@ -5,6 +5,7 @@ import random    # Randomly selects word for Game
 import colorama  # Adds color to game text
 from colorama import Fore, Style
 from constants import LOGO   # Hangman introduction Logo from constants.py
+from constants import OPTIONS   # Hangman Menu Options selection from constants.py
 from constants import lives_left   # Hangman Lives visual from constants.py
 from constants import RULES   # Hangman Rules from constants.py
 colorama.init(autoreset=True)
@@ -40,9 +41,8 @@ def start_game():
     2 to select level of play
     3 to see the game Rules
     """
-    print("Press 1 to Start playing Hang-Hangman")
-    print("Press 2 to select the level to play at")
-    print("Press 3 to read The Hang-Hangman Rules")
+    for options in OPTIONS:
+        print(f"{Fore.BLUE+Style.BRIGHT}{options}")
     start = False
     while not start:
         choice = input("\n")
