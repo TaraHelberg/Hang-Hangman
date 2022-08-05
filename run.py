@@ -2,6 +2,7 @@
 Used for libraries and imports
 """
 import random    # Randomly selects word for Game
+import os   # to use to clear screen
 import colorama  # Adds color to game text
 from colorama import Fore, Style
 from constants import LOGO   # Hangman introduction Logo from constants.py
@@ -49,6 +50,7 @@ def start_game():
         choice = input("\n")
         if choice == "1":
             start = True
+            clear_screen()
             level = "default"
             num_lives = 10
             word = get_random_word()
@@ -56,6 +58,7 @@ def start_game():
             return level
         elif choice == "2":
             start = True
+            clear_screen()
             num_lives = select_game_level()
             word = get_random_word()
             run_game(word, num_lives)
@@ -63,10 +66,12 @@ def start_game():
             hangman_rules()
             input("Enter to return to Menu \n")
             print("\n")
+            clear_screen()
             return start_game()
         else:
             print(f"{Fore.RED+Style.BRIGHT}Please select a level "
                   f"1 , 2 or 3 to make your Choice")
+        clear_screen()
 
 
 def hangman_rules():
@@ -89,14 +94,17 @@ def select_game_level():
         options = input("\n ").upper()
         if options == "E":
             level = True
+            clear_screen()
             num_lives = 12
             return num_lives
         elif options == "M":
             level = True
+            clear_screen()
             num_lives = 10
             return num_lives
         elif options == "H":
             level = True
+            clear_screen()
             num_lives = 8
             return num_lives
         else:
@@ -143,24 +151,29 @@ def run_game(word, num_lives):
         user_try = input(" Guess a letter:\n ").upper()
         try:
             if len(user_try) > 1:
+                clear_screen()
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"You can only guess 1 letter at a time,"
                                  f"you guessed {len(user_try)} letter")
             elif not user_try.isalpha():
+                clear_screen()
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"You can only guess letters,"
                                  f"you guessed {(user_try)},is not a letter")
             elif len(user_try) == 1 and user_try.isalpha():
                 if user_try in guesses:
+                    clear_screen()
                     raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                      f"You have already guessed {(user_try)}")
                 elif user_try not in word:
+                    clear_screen()
                     print(f"{Fore.RED+Style.BRIGHT}"
                           f"{(user_try)} is not in the word.")
                     print(f"{Fore.RED+Style.BRIGHT}Sorry You Lose a Life!")
                     guesses.append(user_try)
                     lives -= 1
                 else:
+                    clear_screen()
                     print(f"{Fore.GREEN+Style.BRIGHT}"
                           f"{user_try} is in the word. Well done!")
 
@@ -175,6 +188,7 @@ def run_game(word, num_lives):
                         game_over = True
 
         except ValueError as e_values:
+            clear_screen()
             print(f"{e_values}.\n Please try again. :D\n")
             continue
 
@@ -219,6 +233,13 @@ def restart_game():
         except ValueError as e_values:
             print(f"{e_values}.\n{Fore.RED+Style.BRIGHT}"
                   f"Please Try again Thank You :D\n")
+
+
+def clear_screen():
+    """
+    Used to clear Terminal screen
+    """
+    os.system("clear")
 
 
 def main():
