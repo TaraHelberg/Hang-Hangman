@@ -231,9 +231,9 @@ def main():
         num_lives = 10
     else:
         num_lives = select_game_level()
+        word = get_random_word()
 
-    word = get_random_word()
-    run_game(word, num_lives)
+        run_game(word, num_lives)
 
 
 main()
