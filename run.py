@@ -151,18 +151,15 @@ def run_game(word, num_lives):
         user_try = input(" Guess a letter:\n ").upper()
         try:
             if len(user_try) > 1:
-                clear_screen()
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"You can only guess 1 letter at a time,"
                                  f"you guessed {len(user_try)} letter")
             elif not user_try.isalpha():
-                clear_screen()
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"You can only guess letters,"
                                  f"you guessed {(user_try)},is not a letter")
             elif len(user_try) == 1 and user_try.isalpha():
                 if user_try in guesses:
-                    clear_screen()
                     raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                      f"You have already guessed {(user_try)}")
                 elif user_try not in word:
@@ -188,7 +185,6 @@ def run_game(word, num_lives):
                         game_over = True
 
         except ValueError as e_values:
-            clear_screen()
             print(f"{e_values}.\n Please try again. :D\n")
             continue
 
