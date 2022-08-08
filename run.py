@@ -234,6 +234,7 @@ def restart_game():
 def clear_screen():
     """
     Used to clear Terminal screen
+    Used from https://www.101computing.net/python-typing-text-effect/
     """
     os.system("clear")
 

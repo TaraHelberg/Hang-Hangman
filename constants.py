@@ -37,7 +37,7 @@ RULES = [
     "Welcome to Hang-Hangman!",
     "How to play Rules :D.",
     "This is a guess the word game.",
-    "Guess 1 letter at a time or you can guess the word !",
+    "Guess 1 letter at a time !",
     "If you guess the wrong letter.You loose a life :( Sorry.",
     "Your Hangman will then start to build.",
     "When you reach 0 lives :( You will be HANGED!",
