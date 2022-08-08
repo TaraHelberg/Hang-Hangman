@@ -118,6 +118,8 @@ def get_random_word():
     How to found on stckoverflow:
     https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
     adpated for use in Hang-Hangman
+    open file encoding found and used from stackoverflow
+    https://stackoverflow.com/questions/9896508/python-encoding-decoding-for-writing-to-a-text-file
     """
     random_word = random.choice(
         open("words.txt", "r", encoding="utf8").read().split('\n')
