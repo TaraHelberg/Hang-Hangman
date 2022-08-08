@@ -68,13 +68,44 @@ The aim is to supply a fun word guessing game to the user.
       + Guess a letter
       + Input Space Shown
 
-  ![options1](./assest/readmeimages/hangman-options1pg1.png)  
+  ![options1](./assest/readmeimages/hangman-options1.png) 
+  
+  * Note on option selection it will trigger the selection Game Level option & clear the terminal screen
+    * Option 2 = Game Level to options Seelction
 
-# Introduction and Welcome
+      + 2 Input by user 
+      + Screen clears & Game Level option shows .
+      +  Input Space Shown
+      + Note on selection of any other the 3 options game will start at that level
 
-# Game in Play
+  ![options2](./assest/readmeimages/hangman-options2.png)
 
-# Game Won
+* Note on option selection it will trigger the selection to Game Rules 
+    * Option 3 = Game Rules   
+
+      + 3 Input by user 
+      + Game Rules shown below 
+      + Pressing enter will return to the Options Menu on a cleared terminal
+      
+  ![options1](./assest/readmeimages/hangman-options3.png)
+
+# Game in play
+
+  * Note that on selction of either options 1 or any off the leves in Options 2 the Game will start .
+      + Is letter in word check and result of letter not in word 
+      + Is letter in word check and result of letter in word
+      + Input of more than 1 letter check and result 
+      + Input of not a letter check and result 
+  * Note User is informed and directed during game play screen is cleared of messages as game progresses    
+
+![gameinplay1](./assest/readmeimages/hangman-gameinplay1.png)
+![gameinplay2](./assest/readmeimages/hangman-gameinplay2.png)
+![gameinplay3](./assest/readmeimages/hangman-gameinplay3.png)
+![gameinplay4](./assest/readmeimages/hangman-gameinplay4.png)
+![gameinplay5](./assest/readmeimages/hangman-gameinplay5.png)
+
+
+
 
 # Technologies  / Support Used
 
