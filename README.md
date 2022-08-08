@@ -94,8 +94,10 @@ The aim is to supply a fun word guessing game to the user.
   * Note that on selction of either options 1 or any off the leves in Options 2 the Game will start .
       + Is letter in word check and result of letter not in word 
       + Is letter in word check and result of letter in word
-      + Input of more than 1 letter check and result 
+      + Input of more than 1 letter check and result / just pressing enter 
       + Input of not a letter check and result 
+      + Input of a letter already used and result
+  * Note Hangman visuals begins to build on letter not in word as life is lost level drops
   * Note User is informed and directed during game play screen is cleared of messages as game progresses    
 
 ![gameinplay1](./assest/readmeimages/hangman-gameinplay1.png)
@@ -103,7 +105,18 @@ The aim is to supply a fun word guessing game to the user.
 ![gameinplay3](./assest/readmeimages/hangman-gameinplay3.png)
 ![gameinplay4](./assest/readmeimages/hangman-gameinplay4.png)
 ![gameinplay5](./assest/readmeimages/hangman-gameinplay5.png)
+![gameinplay6](./assest/readmeimages/hangman-gameinplay6.png)
 
+# Game Won & Game Lost
+
+* Game Won
+  + Won message 
+  + Option to either play again Y / N will appear
+
+* Game Lost
+  + You Lose Message
+  + Option to either play again Y/ N will appear
+ 
 
 
 

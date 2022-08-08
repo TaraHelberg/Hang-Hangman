@@ -200,7 +200,8 @@ def run_game(word, num_lives):
     if game_over:
         print(f"{Fore.GREEN+Style.BRIGHT}Congratulations! YOU WON !")
     else:
-        print(f"The word you had to Guess was {word}")
+        print(f"{Fore.RED+Style.BRIGHT}Sorry :( You Loose"
+              f"The word you had to Guess was {word}")
 
     restart_game()
 
