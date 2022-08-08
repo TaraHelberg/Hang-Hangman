@@ -159,11 +159,11 @@ def run_game(word, num_lives):
             elif not user_try.isalpha():
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"You can only guess letters,"
-                                 f"you guessed {(user_try)},is not a letter")
+                                 f"you guessed {user_try},is not a letter")
             elif len(user_try) == 1 and user_try.isalpha():
                 if user_try in guesses:
                     raise ValueError(f"{Fore.RED+Style.BRIGHT}"
-                                     f"You have already guessed {(user_try)}")
+                                     f"You have already guessed {user_try}")
                 elif user_try not in word:
                     clear_screen()
                     print(f"{Fore.RED+Style.BRIGHT}"
