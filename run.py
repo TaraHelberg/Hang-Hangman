@@ -10,21 +10,17 @@ from constants import OPTIONS   # Hangman Options selection from constants.py
 from constants import lives_left   # Hangman Lives visual from constants.py
 from constants import GAMELEVEL   # Hangman level selection from constatnts.py
 from constants import RULES   # Hangman Rules from constants.py
+
 colorama.init(autoreset=True)
 
 
 def game_intro():
     """
-    Game Name "Logo"
-    Logo from patorjk.com
-    ,Welcome's user,
-    request users name
-    and prints Hello users name
+    Game Name "Logo" from patorjk.com
+    Welcome's user, request users name and prints Hello users name
     """
     for logo in LOGO:
         print(f"{Fore.BLUE+Style.BRIGHT}{logo}")
-    name = None
-
     while True:
         name = input(f"{Fore.GREEN+Style.BRIGHT}What is your name?\n")
 
@@ -114,11 +110,9 @@ def select_game_level():
 
 def get_random_word():
     """
-    Picks a random word from words.txt for hangman word to be guessed by user.
-    How to found on stckoverflow:
+    Picks a random word from words.txt & file encoding for hangman game
+    How to found on stckoverflow: adpated for use in Hang-Hangman
     https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
-    adpated for use in Hang-Hangman
-    open file encoding found and used from stackoverflow
     https://stackoverflow.com/questions/9896508/python-encoding-decoding-for-writing-to-a-text-file
     """
     random_word = random.choice(
@@ -141,29 +135,29 @@ def run_game(word, num_lives):
     Hang-Hangman is based around the YouTube video
     https://www.youtube.com/watch?v=m4nEnsavl6w
     """
-    word_dictonary = "_" * len(word)
+    word_to_guess = "_" * len(word)
     game_over = False
     guesses = []
     lives = num_lives
     print("\n")
     print(f"Lives: {lives}\n")
-    print("The word to guess: " + " ".join(word_dictonary) + "\n")
+    print("The word to guess: " + " ".join(word_to_guess) + "\n")
 
     while not game_over and lives > 0:
-        user_try = input(" Guess a letter:\n ").upper()
+        user_try = input("Guess a letter:\n ").upper()
         try:
             if len(user_try) > 1:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
-                                 f"You can only guess 1 letter at a time,"
-                                 f"you guessed {len(user_try)} letter")
+                                 f"You can only guess 1 letter at a time. "
+                                 f"You guessed {len(user_try)} letter.")
             elif not user_try.isalpha():
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
-                                 f"You can only guess letters,"
-                                 f"you guessed {user_try},is not a letter")
+                                 f"You can only guess letters."
+                                 f"You guessed {user_try},is not a letter.")
             elif len(user_try) == 1 and user_try.isalpha():
                 if user_try in guesses:
                     raise ValueError(f"{Fore.RED+Style.BRIGHT}"
-                                     f"You have already guessed {user_try}")
+                                     f"You have already guessed {user_try}.")
                 elif user_try not in word:
                     clear_screen()
                     print(f"{Fore.RED+Style.BRIGHT}"
@@ -177,13 +171,13 @@ def run_game(word, num_lives):
                           f"{user_try} is in the word. Well done!")
 
                     guesses.append(user_try)
-                    word_dictonary_list = list(word_dictonary)
+                    word_to_guess_list = list(word_to_guess)
                     indices = [i for i, letter in enumerate(word)
                                if letter == user_try]
                     for index in indices:
-                        word_dictonary_list[index] = user_try
-                        word_dictonary = "".join(word_dictonary_list)
-                    if "_" not in word_dictonary:
+                        word_to_guess_list[index] = user_try
+                        word_to_guess = "".join(word_to_guess_list)
+                    if "_" not in word_to_guess:
                         game_over = True
 
         except ValueError as e_values:
@@ -194,7 +188,7 @@ def run_game(word, num_lives):
 
         if lives > 0:
             print(f"Lives: {lives}\n")
-            print("The word to guess: " + " ".join(word_dictonary) + "\n")
+            print("The word to guess: " + " ".join(word_to_guess) + "\n")
             print("Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
@@ -237,7 +231,7 @@ def restart_game():
 def clear_screen():
     """
     Used to clear Terminal screen
-    Used from https://www.101computing.net/python-typing-text-effect/
+    Credit: https://www.101computing.net/python-typing-text-effect/
     """
     os.system("clear")
 

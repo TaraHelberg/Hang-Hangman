@@ -1,6 +1,9 @@
 """
-Game Name "Logo" Logo from patorjk.com & Welcome's user
+Stores constants to be use in Game
+The Game Logo and Welcome, Game Options Menu,
+Game Levels Options, Game Rules & Hangman Visuals
 """
+#  Game Name "Logo" Logo from patorjk.com & Welcome's user
 LOGO = [
         """
         HH   HH   AAA   NN   NN   GGGG
@@ -19,20 +22,13 @@ LOGO = [
         "Welcome to Hang-Hangman",
         "We hope you have fun!"
 ]
-"""
-Starts the game off with options of:
-    1 to play right away, default level medium
-    2 to select level of play
-    3 to see the game Rules
-"""
+#  Starts the game off with options menu 3 options
 OPTIONS = [
     "Press 1 to Start playing Hang-Hangman",
     "Press 2 to select the level to play at",
     "Press 3 to read The Hang-Hangman Rules"
 ]
-"""
-Explains to the User how to play the game.
-"""
+#  Explains to the User how to play the game.
 RULES = [
     "Welcome to Hang-Hangman!",
     "How to play Rules :D.",
@@ -44,18 +40,14 @@ RULES = [
     "Don't worry you can restart the game!",
     "Play again and WIN :D "
     ]
-"""
-Lets the User select the level of Hang-Hangman.
-"""
+#  Lets the User select the level of Hang-Hangman.
 GAMELEVEL = [
     "Select the level you wish to play at.",
     "Press E for Easy, 12 Lives",
     "Press M for Medium, 10 Lives",
     "Press H for Hard, 8 Lives"
 ]
-"""
-Displays Hang-Hangman visuals to show man been hung on letter not in word.
-"""
+# Displays Hang-Hangman visuals to show man been hung on letter not in word.
 lives_left = [
         """
         ___________
@@ -146,7 +138,6 @@ lives_left = [
         |
         ========
         """,
-
         """
         |
         |
@@ -164,7 +155,5 @@ lives_left = [
         """
         |
         ========
-        """,
-        """
         """
 ]

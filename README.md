@@ -75,7 +75,7 @@ The aim is to supply a fun word guessing game to the user.
 
       + 2 Input by user 
       + Screen clears & Game Level option shows .
-      +  Input Space Shown
+      + Input Space Shown
       + Note on selection of any other the 3 options game will start at that level
 
   ![options2](./assest/readmeimages/hangman-options2.png)
@@ -113,11 +113,33 @@ The aim is to supply a fun word guessing game to the user.
   + Won message 
   + Option to either play again Y / N will appear
 
+![gamewon](./assest/readmeimages/hangman-youwon.png)
+
 * Game Lost
   + You Lose Message
   + Option to either play again Y/ N will appear
- 
 
+![gamelost](./assest/readmeimages/hangman-gamelost.png)
+
+# Play again Y/N Choice
+
+  * Yes option 
+    + User Input Y 
+    + Main Options Menu 
+    + Input Space Shown
+
+  * On selection of option screen will clear and run the selected option
+
+![playagainy](./assest/readmeimages/hangman-playagainy.png)  
+
+ * NO option 
+    + User Input N 
+    + Game Heading Logo ,Welcome & User name request  
+    + Input Space Shown
+
+  * Game is back at the beginning
+
+![playagainy](./assest/readmeimages/hangman-playagainy.png)  
 
 
 # Technologies  / Support Used
@@ -128,9 +150,10 @@ The aim is to supply a fun word guessing game to the user.
     + Code Institute Supplied the template inorder to display Python in a Visual formed Terminal
     + GitHub for my repository 
     + Git used to code within and provided backups of all my code.
-    + Hourokapp for project deployment
+    + Hourokapp for project deployment https://dashboard.heroku.com/apps
     + Patorjik.com for the Game Logo https://patorjk.com/software/taag/#p=display&f=Letters&t=HANG%20-%0AHANGMAN
-     
+    + Lucidchart for my Flowchart which helped with the logic & flow of my code https://www.lucidchart.com/
+    
 # Testing
 * Testing During development of the project was done through out the project to see how the project looked and felt within the Git Terminal using python3. run.py
 
@@ -166,6 +189,20 @@ The aim is to supply a fun word guessing game to the user.
     * No errors were returned from 
 
 # Deployment of Project
+
+  * Deployment was made possible by GitHub
+    + Initiated a repository in git via template supplied by codeinstute : 
+    + Created all folders and files and code project
+    
   
 # Credits
+
+   * Code Institute without who I would have had no base to begin a project & Readme.md Template .https://codeinstitute.net/ie/
+   * Reuben Ferrante my mentor without all his great guidance I would be lost. A Huge Thanks. https://github.com/arex18
+   * Youtube video tutorial to base my game on. https://www.youtube.com/watch?v=m4nEnsavl6w
+   * The Slack community - for someone always been there no matter the time and with advice or direction. https://slack.com
+   * StackOverflow for all the information to assit with my project . https://stackoverflow.com
+   * I am Responsive for a fantastic spot to see a visual of responsiveness. https://ui.dev/amiresponsive?msclkid=400b1adabe5b11ecbc48938198bb87b4
+   * 
+
   
