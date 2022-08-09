@@ -294,6 +294,17 @@ Code was also run through the PEP8 during development for the same reason.
     + Click enable automatic deploys
     + Once project deployment has been completed a message will be shown and a button will be shown to view the mock terminal .
     + Click "View" button to be taken to mock terminal
+
+# Clone Project 
+
+* Cloning of Project was made possible by GitHub
+    + Go to Git Hub
+    + Go to Hang-Hangman repository https://github.com/TaraHelberg/Hang-Hangman
+    + Click on it to go to main repository site 
+    + Click on the Code drop down button menu next to the greeen Gippod button
+    + Click on HTTP section you will see the http of the repository click on the window next to it it will say copied
+    + Clikced on Download and Zip
+    + Clicked on Open with GitHubDesktop
       
 # Credits
 
