@@ -214,25 +214,36 @@ The aim is to supply a fun word guessing game to the user.
 
 * User Testing
 
-    + Expectations
-      As a user I wanted the project to 
-      1. A nice Introduction
-      2. Easy to Follow Instructions
-      3. Clear information to make choices
-      4. Levels in the Game to keep it Interesting
-      5. Fun to Play      
+  * Expectations
+     As a user I wanted the project to 
+    1. A nice Introduction
+    2. Easy to Follow Instructions
+    3. Clear information to make choices
+    4. Levels in the Game to keep it Interesting
+    5. Fun to Play      
 
-    + Result
-      As a user I was able to  
-      1. Be introduced to the Game & Welcome
-      2. The instructions are clear and easy to follow 
-      3. Information is clear and I could make choices in the game 
-      4. The game provided levels of play so I could challenge myself and it kept me interested
-      5. It was fun to play
+  * Result
+     As a user I was able to  
+    1. Be introduced to the Game & Welcome
+    2. The instructions are clear and easy to follow 
+    3. Information is clear and I could make choices in the game 
+    4. The game provided levels of play so I could challenge myself and it kept me interested
+    5. It was fun to play
       
-# Bugs 
+# Bugs
 
+Bugs and erros econountered during coding of project were solved through contiuned testing throught the development.
+Using print statements and through git terminal python3 run.py.
+Testing code to see what the code was doing and how it was responding as well as locating any errors that might be brought up in the problems part of git.
+Code was also run through the PEP8 during development for the same reason.
+* Bugs / Errors encountered
+ + I did as new to python have many syntax errors as wells as indent errors and white space errors.
+ + Breaks in my while loop was detected this way & resolved 
+ + another error detected and resolved was the open encoding for my random word 
 
+* Unfixed Bugs / Erros 
+ + I feel that a bug although the code works are the repeated code which I feel could be simplified into either 1 line or into a def () function to be used as 1 line of code
+ + Also although it does not effect the game a bug I feel is that you can not guess the entire word and would like to reslove this .
 
 # Validator testing
   * PEP8 
