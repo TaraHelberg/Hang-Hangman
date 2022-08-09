@@ -173,13 +173,45 @@ The aim is to supply a fun word guessing game to the user.
 
   * Manual Testing
 
-| Feature           |  Expect              |  Action |  Result               |
-| ----------------- | -------------------- | ------- | ----------------------|
-|  Heading Log      |  Display On Open     |  N/A    |   ✔                   | 
-|  Welcome          |  Display On Open     |  N/A    |   ✔                   |
-|  User Name Request|  Display On Open     |  N/A    |   ✔                   |
-|                   |                      |         |                        |
-|                   |                      |         |                        |  
+| Feature            |  Expect                       | Action  | Result              |
+| ------------------ | ----------------------------- | ------- | -------------------|
+|  Heading Log       |  Display On Open              |  N/A    |   ✔                | 
+|  Welcome           |  Display On Open              |  N/A    |   ✔                |
+|  User Name Request |  Display On Open              |  N/A    |   ✔                |
+|  User Input Name   |  User to Input Name []        | Enter   |   ✔ Name & Entered |
+|  Hello {NAME} &    |  Displays On Enter -          | N/A     |   ✔                | 
+|  Show Game Menu    |  of User Name & Enter         | N/A     |   ✔                | 
+|  Option 1          |  Game to start                |1 & Enter|   ✔                |
+|  Game Starts       |  Lives Displayed              | N/A     |   ✔                |
+|  Game Starts       |  Hidden Word Displayed        | N/A     |   ✔                |
+|  Game Starts       |  Gues a Letter & Input []     | N/A     |   ✔                |
+|  Option 2          |  Level Menu Displayed         |2 & Enter|   ✔                |
+|  Level Menu E      |  Game To Start                |E & Enter|   ✔                |
+|  Game Starts       |  Lives Displayed              | N/A     |   ✔                |
+|  Game Starts       |  Hidden Word Displayed        | N/A     |   ✔                |
+|  Game Starts       |  Guess a Letter & Input []    | N/A     |   ✔                | 
+|  Level Menu M      |  Game To Start                |M & Enter|   ✔                |
+|  Game Starts       |  Lives Displayed              | N/A     |   ✔                |
+|  Game Starts       |  Hidden Word Displayed        | N/A     |   ✔                |
+|  Game Starts       |  Guess a Letter & Input []    | N/A     |   ✔                | 
+|  Level Menu H      |  Game To Start                |H & Enter|   ✔                |
+|  Game Starts       |  Lives Displayed              | N/A     |   ✔                |
+|  Game Starts       |  Hidden Word Displayed        | N/A     |   ✔                |
+|  Game Starts       |  Guess a Letter & Input []    | N/A     |   ✔                |  
+|  Option 3          |  Game Rules Displayed         |3 & Enter|   ✔                |
+|  Game Rules        |  Return to  Game Menu         | Enter   |   ✔                |
+|  Guess a letter [] |  Input a letter of Choice     | Choice  |   ✔ & Enter        |
+|  During Game Play  |  Hangman Visual to Build      | N/A     |   ✔                |
+|  During Game Play  |  Letter Not in Word Message   | N/A     |   ✔                |
+|  During Game Play  |  Letter In Word Message       | N/A     |   ✔                |
+|  During Game Play  |  Not a letter or _ Message    | N/A     |   ✔                |
+|  During Game Play  |  More than 1 letter Message   | N/A     |   ✔                |
+|  Game Play Won     |  You Won & Play Again Message | N/A     |   ✔                |
+|  Game Play Lost    |  You Lost & Play Again Message| N/A     |   ✔                |
+|  Play Again Message|  Option to Select Y or No []  | Y / N   |   ✔ Y/N & Enter    |
+|  Play Y Input      |  Returns to Main Menu         |Y & Enter|   ✔                |
+|  Play N Input      |  Returns to Heading,Welcome   |N & Enter|   ✔                |
+
 * User Testing
 
     + Expectations
