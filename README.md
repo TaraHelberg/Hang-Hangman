@@ -5,6 +5,10 @@ The user will be given the game rules , a level choice to play the game at Easy 
 The user can try to guess the word by inputting letters, if the letter is wrong a visual of the traditional hangman man will start to appear, if the letter is in the word the letter is shown and another guess can be made. Until either all lives are used or the game is won.
 The aim is to supply a fun word guessing game to the user.
 
+* Git Repository can be found here : https://github.com/TaraHelberg/Hang-Hangman
+
+* Git Deployed site can be found here : https://hang-hangman.herokuapp.com/
+
 ![amiresponsive](./assest/readmeimages/hangman-amiresponsive.png)
 
 # Planning Of Hang-Hangman
@@ -141,68 +145,125 @@ The aim is to supply a fun word guessing game to the user.
 
 ![playagainn](./assest/readmeimages/hangman-playagainn.png)  
 
+* Prospective Features
+
+  + Using Google sheets & Api - To keep and return game score Previous, Present hight scores etc. To stored by the name of the user. 
+  + Addition of code to be able to guess entire word and once word was guessed return option of playagain Y/N 
+
+  * Note :For the code itself I am sure with more work and further understanding of Pyhton code could be made to be neater and simpler with less repeated code . 
 
 # Technologies  / Support Used
 
 * Below is a list of Technologies / Support I have used to build my site.
 
     + Code Institute lessons and the Love Sandwiches in assisting with how to start and construct my project.
-    + Code Institute Supplied the template inorder to display Python in a Visual formed Terminal
+    + Code Institute Supplied the template inorder to display Python in a Terminal :https://github.com/Code-Institute-Org/python-essentials-template
     + GitHub for my repository 
     + Git used to code within and provided backups of all my code.
     + Hourokapp for project deployment https://dashboard.heroku.com/apps
     + Patorjik.com for the Game Logo https://patorjk.com/software/taag/#p=display&f=Letters&t=HANG%20-%0AHANGMAN
     + Lucidchart for my Flowchart which helped with the logic & flow of my code https://www.lucidchart.com/
+    + Youtube tutorial to base my project around : https://www.youtube.com/watch?v=m4nEnsavl6w
+    + Stackoverflow for codeing assitance when need and some code that I copied and refered to in docstrings.
+    + 101 computing for the clear screen code : https://www.101computing.net/python-typing-text-effect/ 
+    + Used to make my Heading Logo : http://patorjk.com/
     
 # Testing
 * Testing During development of the project was done through out the project to see how the project looked and felt within the Git Terminal using python3 run.py to assertain if the code was working and if any errors "Bugs" occured PEP8 was also used throught the project.
 
   * Manual Testing
 
-| Feature           |  Expect              |  Action |  Result                 |
-|-------------------|----------------------|---------|-------------------------|
-|                   |                      |         |                         |
-|                   |                      |         |                         |
-|                   |                      |         |                         | 
-
+| Feature           |  Expect              |  Action |  Result               |
+| ----------------- | -------------------- | ------- | ----------------------|
+|  Heading Log      |  Display On Open     |  N/A    |   ✔                   | 
+|  Welcome          |  Display On Open     |  N/A    |   ✔                   |
+|  User Name Request|  Display On Open     |  N/A    |   ✔                   |
+|                   |                      |         |                        |
+|                   |                      |         |                        |  
 * User Testing
 
     + Expectations
       As a user I wanted the project to 
-      1. Understand the purpose of the site, 
-      2. Be able to navigate easily through the site,
-      3. Have clear instructions
-      4. 
+      1. A nice Introduction
+      2. Easy to Follow Instructions
+      3. Clear information to make choices
+      4. Levels in the Game to keep it Interesting
+      5. Fun to Play      
+
     + Result
       As a user I was able to  
-      1. 
-      2. 
-      3. 
-      4. 
-
+      1. Be introduced to the Game & Welcome
+      2. The instructions are clear and easy to follow 
+      3. Information is clear and I could make choices in the game 
+      4. The game provided levels of play so I could challenge myself and it kept me interested
+      5. It was fun to play
+      
 # Bugs 
 
 
 
 # Validator testing
   * PEP8 
-    * No errors were returned from 
+    * Both .py files tested
+
+  run.py no errors returned
+
+![run.py](./assest/readmeimages/hangman-run.pyPEP8.png)
+
+  constants.py no errors returned
+
+![constants.py](./assest/readmeimages/hangman-constants.pyPEP8.png)
+
+  * Lighhouse Testing
+  I ran Google Lighthouse 
+
+![lighthouse](./assest/readmeimages/hangman-lighthousetest.png)       
 
 # Deployment of Project
 
   * Deployment was made possible by GitHub
-    + Initiated a repository in git via template supplied by codeinstute : 
+    + Initiated a repository in git via template supplied by codeinstute : :https://github.com/Code-Institute-Org/python-essentials-template
+    + Click Use this Template
+    + Add repository name
+    + Click Create Repository from template 
     + Created all folders and files and code project
-    
-  
+    + Insure all inputs and any other location required have the \n required for Heroku
+    + In terminal type pip3 freeze > requirements.txt press enter , file is updated
+    + Remembering to add , commit and push all changes to github
+    + Go to https://dashboard.heroku.com/apps
+    + Click New
+    + Select Create New app
+    + Add project name & Changed Region to relevant country
+    + Click create app
+    + Go to settings section click on 
+    + Check config var and added PORT & 800 as I did not have any confidential files this was all that was needed
+    + Got to Build Packs 
+    + Add python click save
+    + Add Nodejs click save
+    + Check the order of these two files
+    + Go to Deploy Section 
+    + Go to Deployment Method
+    + Select GItHub
+    + Click connect to GitHub
+    + Put the repository name of Project in & click search
+    + Click connect
+    + Scroll down and choose Automatic deploys so as to insure project updates done in github are updated as code is changed or added to project
+    + Click enable automatic deploys
+    + Once project deployment has been completed a message will be shown and a button will be shown to view the mock terminal .
+    + Click "View" button to be taken to mock terminal
+      
 # Credits
 
-   * Code Institute without who I would have had no base to begin a project & Readme.md Template .https://codeinstitute.net/ie/
+   * Code Institute without who I would have had no base to begin a project & Readme.md Template or the special terminal for python .https://codeinstitute.net/ie/
    * Reuben Ferrante my mentor without all his great guidance I would be lost. A Huge Thanks. https://github.com/arex18
    * Youtube video tutorial to base my game on. https://www.youtube.com/watch?v=m4nEnsavl6w
    * The Slack community - for someone always been there no matter the time and with advice or direction. https://slack.com
    * StackOverflow for all the information to assit with my project . https://stackoverflow.com
-   * I am Responsive for a fantastic spot to see a visual of responsiveness. https://ui.dev/amiresponsive?msclkid=400b1adabe5b11ecbc48938198bb87b4
-   * 
+     These two links in particular :
+     https://stackoverflow.com/questions/40835800/getting-a-random-word-from-a-text-file
+     https://stackoverflow.com/questions/9896508/python-encoding-decoding-for-writing-to-a-text-file 
+   * I am Responsive for a visual of the project on devices. https://ui.dev/amiresponsive?msclkid=400b1adabe5b11ecbc48938198bb87b4
+   * 101 computing for the clear screen code : https://www.101computing.net/python-typing-text-effect/ 
+   * Used to make my Heading Logo : http://patorjk.com/
 
   
