@@ -25,8 +25,8 @@ LOGO = [
 #  Starts the game off with options menu 3 options
 OPTIONS = [
     "Press 1 to Start playing Hang-Hangman",
-    "Press 2 to select the level to play at",
-    "Press 3 to read The Hang-Hangman Rules"
+    "Press 2 to Select the level to play at",
+    "Press 3 to Read The Hang-Hangman Rules"
 ]
 #  Explains to the User how to play the game.
 RULES = [
